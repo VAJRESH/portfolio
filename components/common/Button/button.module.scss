@@ -1,0 +1,23 @@
+@import "../../../styles/base.scss";
+
+$margin: 10px;
+.btn {
+  position: relative;
+
+  width: calc(100% - ($margin * 2));
+  margin: $margin;
+  padding: 10px 15px;
+
+  text-align: left;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  overflow: hidden;
+
+  &.active,
+  &:hover {
+    background: $toBottom;
+    color: $white;
+  }
+}

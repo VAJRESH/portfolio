@@ -1,0 +1,71 @@
+@import "../../styles/base.scss";
+
+.layoutContainer {
+  @include flex-center;
+
+  min-height: 100vh;
+  min-width: 100vw;
+
+  background-color: $bg-color;
+  color: $black;
+
+  // side bar
+  aside {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    min-width: 150px;
+    max-width: 180px;
+    min-height: 100vh;
+
+    margin: 0;
+    margin-right: 30px;
+
+    // top section with logo and name
+    .banner {
+      @include flex-center;
+      flex-direction: column;
+      padding: 10px 0;
+
+      .imageContainer {
+        position: relative;
+        border-radius: 50%;
+        padding: 15px;
+
+        height: 100px;
+        width: 100px;
+      }
+
+      .name {
+        text-transform: uppercase;
+        margin-top: 10px;
+
+        background: $toRight;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .position {
+        color: $neutral;
+
+        &:hover {
+          color: $neutral-dark;
+        }
+      }
+    }
+
+    .btnContainer {
+      @include flex-center;
+      flex-direction: column;
+
+      button {
+        margin: 5px 10px;
+      }
+    }
+  }
+
+  main {
+    flex: 4;
+  }
+}

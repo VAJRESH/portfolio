@@ -1,0 +1,102 @@
+@import "./base.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// neumorphic styles
+.neu-box {
+  background-color: $bg-color;
+  box-shadow: 3px 3px 5px 0px $shadow-dark, -3px -3px 5px 0px $shadow-light;
+  border-radius: $rounded;
+
+  margin: $gap;
+}
+
+// typography
+$h1: 96px;
+$h2: 60px;
+$h3: 48px;
+$sub-title: 20px;
+$info: 16px;
+$caption: 14px;
+
+$h4: 32px;
+.title {
+  font-size: $h4;
+  font-weight: bold;
+}
+
+$p: 15px;
+p,
+.p {
+  font-size: $p;
+}
+.p-bold {
+  font-size: $p;
+  font-weight: bold;
+}
+
+// accessibility
+// https://sebhastian.com/html-hover-text/#:~:text=There%20are%20two%20ways%20you,CSS%20effect%20using%20%3Abefore%20selector
+.desc {
+  position: relative;
+
+  text-decoration: dashed underline $neutral 1px;
+  cursor: help;
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 110%;
+
+    content: attr(data-desc);
+
+    visibility: hidden;
+    opacity: 0;
+
+    width: max-content;
+    max-width: 300px;
+
+    background-color: $black;
+    color: $white;
+
+    text-align: center;
+    padding: 5px $gap;
+    border-radius: 5px;
+
+    transition: opacity 1s ease-in-out;
+
+    z-index: 1;
+  }
+
+  &:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// util classes (common classes that are like bootstrap util classes)
+@for $i from 1 through 100 {
+  .w-#{$i} {
+    width: #{$i} + "%";
+  }
+
+  .h-#{$i} {
+    height: #{$i} + "%";
+  }
+}

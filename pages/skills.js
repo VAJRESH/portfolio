@@ -1,4 +1,4 @@
-export default function HomePage() {
+export default function SkillsPage() {
   return (
     <>
       Main page data

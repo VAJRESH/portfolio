@@ -1,0 +1,37 @@
+// colors
+$black: #222;
+$white: #fafafa;
+$black-neutral: #4d4d4d;
+
+$neutral: #aaa;
+$neutral-light: #e0e0e0;
+$neutral-dark: #888;
+
+$primary-light: #00a1ff;
+$primary-neutral: #0066ff;
+$primary-dark: #0015b5;
+
+$bg-color: #ecf0f3;
+
+$danger: #e03636;
+$danger: #48dc3c;
+
+// neumophic styles
+$shadow-light: #ffffff;
+$shadow-dark: #b5b5b5;
+
+$rounded: 10px;
+
+// spacing
+$gap: 10px;
+
+// gradients
+$toRight: linear-gradient(to right, $primary-light, $primary-dark);
+$toBottom: linear-gradient($primary-dark, $primary-neutral, $primary-light);
+
+// mixins
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
