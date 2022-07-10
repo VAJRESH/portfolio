@@ -28,12 +28,17 @@ a {
 }
 
 // typography
-$h1: 96px;
 $h2: 60px;
 $h3: 48px;
 $sub-title: 20px;
 $info: 16px;
 $caption: 14px;
+
+$h1: 96px;
+.h1 {
+  font-size: $h1;
+  font-weight: bolder;
+}
 
 $h4: 32px;
 .title {

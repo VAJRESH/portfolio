@@ -41,9 +41,7 @@
         text-transform: uppercase;
         margin-top: 10px;
 
-        background: $toRight;
-        background-clip: text;
-        color: transparent;
+        @include text-gradient();
       }
 
       .position {
@@ -67,5 +65,7 @@
 
   main {
     flex: 4;
+    min-height: 100vh;
+    padding-top: 10vh;
   }
 }

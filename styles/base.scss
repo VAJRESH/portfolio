@@ -1,3 +1,5 @@
+@import "./animation.scss";
+
 // colors
 $black: #222;
 $white: #fafafa;
@@ -26,7 +28,12 @@ $rounded: 10px;
 $gap: 10px;
 
 // gradients
-$toRight: linear-gradient(to right, $primary-light, $primary-dark);
+$toRight: linear-gradient(
+  to right,
+  $primary-light,
+  $primary-neutral,
+  $primary-dark
+);
 $toBottom: linear-gradient($primary-dark, $primary-neutral, $primary-light);
 
 // mixins
@@ -34,4 +41,11 @@ $toBottom: linear-gradient($primary-dark, $primary-neutral, $primary-light);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin text-gradient($direction: $toRight) {
+  background: $direction;
+  color: transparent;
+  background-clip: text;
+  width: max-content;
 }

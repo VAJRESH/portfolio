@@ -1,8 +1,9 @@
+import Home from "../components/Home";
+
 export default function HomePage() {
   return (
     <>
-      Main page data
-      <div className={`neu-box`}></div>
+      <Home />
     </>
   );
 }

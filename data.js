@@ -6,3 +6,7 @@ export const sidebarBtns = [
   { name: "Contact", route: "/contact" },
   { name: "Resume", route: "/resume" },
 ];
+
+export const home = {
+  title: "Hi,*I am Vajresh!",
+};
