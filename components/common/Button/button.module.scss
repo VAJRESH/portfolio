@@ -17,7 +17,7 @@ $margin: 10px;
 
   &.active,
   &:hover {
-    background: $toRight;
+    background: $primary-gradient-to-right;
     color: $white;
   }
 }

@@ -36,6 +36,10 @@ export default function Home() {
           return <span key={word + i}>{word}</span>;
         })}
       </h1>
+
+      <section className={`${styles.gooeyContainer}`}>
+        <div className={`${styles.gooey}`}></div>
+      </section>
     </div>
   );
 }
