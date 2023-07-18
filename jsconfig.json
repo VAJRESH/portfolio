@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/common/*": ["./components/common/*"],
+      "@/contants/*": ["./contants/*"],
+      "@/styles/*": ["./styles/*"]
+    }
+  }
+}

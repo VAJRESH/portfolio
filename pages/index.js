@@ -1,9 +1,9 @@
-import Home from "../components/Home";
+import PageContainer from "@/components/PageContainer";
 
 export default function HomePage() {
   return (
     <>
-      <Home />
+      <PageContainer />
     </>
   );
 }

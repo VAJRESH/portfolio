@@ -1,0 +1,26 @@
+.title {
+  @include text-gradient();
+  user-select: none;
+  cursor: auto;
+  font-size: 6rem;
+
+  span {
+    opacity: 0;
+    display: inline-block;
+
+    &.fadeIn {
+      opacity: 1;
+    }
+
+    &:hover {
+      @include text-gradient($primary-gradient);
+      animation: rubberBand 1s infinite steps(20, end);
+      will-change: transform;
+      transform: translateZ(0);
+    }
+  }
+}
+
+.subtitle {
+  color: $neutral;
+}

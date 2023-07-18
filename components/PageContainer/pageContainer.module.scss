@@ -1,6 +1,4 @@
-@import "../../styles/base.scss";
-
-.layoutContainer {
+.pageContainer {
   @include flex-center;
 
   min-height: 100vh;
@@ -65,7 +63,20 @@
 
   main {
     flex: 4;
-    min-height: 100vh;
-    padding-top: 10vh;
+
+    .sectionContainer {
+      scroll-snap-type: y mandatory;
+
+      height: 100vh;
+      overflow: auto;
+
+      section {
+        padding: 5em 3em 3em;
+
+        scroll-snap-align: center;
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 }
