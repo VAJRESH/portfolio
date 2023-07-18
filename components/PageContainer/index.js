@@ -1,13 +1,13 @@
 // portfolio\components\Layout\index.js
 
 import Button from "@/common/Button";
-import { SECTIONS } from "@/constants";
 import { capitalize } from "@/utils/string.utils";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Banner from "./Banner";
 import SectionContainer from "./SectionContainer";
 import styles from "./pageContainer.module.scss";
+import { SECTIONS } from "@/data";
 
 export default function PageContainer() {
   const router = useRouter();
@@ -19,7 +19,7 @@ export default function PageContainer() {
         <Banner />
 
         <section className={`${styles.btnContainer}`}>
-          {SECTIONS.map((sectionData) => {
+          {SECTIONS?.map((sectionData) => {
             return (
               <Button
                 key={sectionData?.id}

@@ -6,7 +6,6 @@
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/common/*": ["./components/common/*"],
-      "@/contants/*": ["./contants/*"],
       "@/styles/*": ["./styles/*"]
     }
   }

@@ -1,6 +1,5 @@
 import Title from "@/common/Title";
-import { ASSETS } from "@/constants";
-import { about } from "@/data";
+import { ASSETS, about } from "@/data";
 import Image from "next/image";
 import Details from "../common/Details";
 import styles from "./about.module.scss";
@@ -10,17 +9,13 @@ export default function About() {
     <>
       <div className={`${styles.aboutContainer}`}>
         <div>
-          <Title title={about.title} subtitle={about.subtitle} />
+          <Title title={about.title} subtitle={about.subTitle} />
 
           <Details details={about.details} />
         </div>
 
-        <section
-        // style={{
-        //   backgroundImage: `url(${ASSETS.developerActivity})`,
-        // }}
-        >
-          <Image src={ASSETS.developerActivity} layout="fill" alt="" />
+        <section>
+          <Image src={ASSETS?.developerActivity} layout="fill" alt="" />
         </section>
       </div>
     </>
