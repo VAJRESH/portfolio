@@ -13,6 +13,9 @@ export default function SectionContainer({ sectionArr = [] }) {
   useEffect(() => {
     console.log(section, active);
 
+    if (!active && !section)
+      router.replace({ query: { section: sectionArr?.[0]?.id } });
+
     function handleScroll(e) {
       if (!!active) return;
 

@@ -37,7 +37,17 @@ export const about = {
     "Github",
     "Python",
     "Java",
-    "Documentation",
-    "Planning",
   ],
+};
+
+export const skills = {
+  title: "Expertise & Skills",
+  subTitle: "Languages I Excel At",
+  details: `I love JavaScript and related tech stack. I have worked with NodeJS and
+    Express as backend tech along with ReactJS or NextJS as frontend and MongoDB
+    as database.*I build software applications which are easy to use, responsive
+    and modern using best practices. Languages which I have worked with are
+    JavaScript, Python, Java and C.*Creating landing pages, website, web
+    applications is what I am best at. I can design, animate, develop and deploy
+    web applications.`,
 };
