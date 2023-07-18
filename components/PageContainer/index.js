@@ -3,6 +3,7 @@
 import Button from "@/common/Button";
 import { SECTIONS } from "@/constants";
 import { capitalize } from "@/utils/string.utils";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import Banner from "./Banner";
 import SectionContainer from "./SectionContainer";
@@ -26,13 +27,13 @@ export default function PageContainer() {
                   section === sectionData?.id || active === sectionData?.id
                 }
                 handleClick={() => {
-                  router.replace(
-                    { query: { active: sectionData?.id } },
-                    undefined,
-                    { shallow: true },
-                  );
+                  router.replace({ query: { active: sectionData?.id } }, "/", {
+                    shallow: true,
+                  });
                 }}
               >
+                <Image height={15} width={15} src={sectionData?.icon} alt="" />
+
                 {capitalize(sectionData?.id)}
               </Button>
             );

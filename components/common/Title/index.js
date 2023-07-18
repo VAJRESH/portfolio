@@ -9,22 +9,44 @@ export default function Title({ title = "", subtitle = "", size = "medium" }) {
   useEffect(() => {
     if (!h1Ref?.current) return;
 
-    const fadeInDurationInMS = 100;
-    let index = 0;
-    const timer = setInterval(addClassToChild, fadeInDurationInMS);
+    const h1 = h1Ref?.current;
 
-    function addClassToChild() {
-      const allChilds = h1Ref?.current?.children;
-      const elem = allChilds?.[index];
-      ++index;
+    function fadeIn() {
+      const fadeInDurationInMS = 100;
+      let index = 0;
+      const timer = setInterval(addClassToChild, fadeInDurationInMS);
 
-      if (elem?.localName !== "span") return;
+      function addClassToChild() {
+        const allChilds = h1Ref?.current?.children;
+        const elem = allChilds?.[index];
+        ++index;
 
-      elem?.classList?.add(styles.fadeIn);
-      if (index === allChilds?.length) clearInterval(timer);
+        if (elem?.localName !== "span") return;
+
+        elem?.classList?.add(styles.fadeIn);
+        if (index === allChilds?.length) clearInterval(timer);
+      }
     }
 
-    return () => clearInterval(timer);
+    h1.observer = new IntersectionObserver((e) => {
+      const isIntersecting = e?.[0]?.isIntersecting;
+      removeClass();
+
+      if (isIntersecting) fadeIn();
+    });
+
+    function removeClass() {
+      const allChilds = h1?.children;
+      for (let i = 0; i < allChilds?.length; i++) {
+        const elem = allChilds[i];
+
+        elem.className = "";
+      }
+    }
+
+    h1?.observer?.observe(h1);
+
+    return () => h1?.observer?.disconnect();
   }, []);
 
   return (

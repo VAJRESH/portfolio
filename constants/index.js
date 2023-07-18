@@ -25,13 +25,23 @@ export const ASSETS = {
   reactLogo: "/logo/react.png",
   sassLogo: "/logo/sass.png",
   htmlLogo: "/logo/html.png",
+
+  codeReview: "/illustrations/code-review.svg",
+  codeThinking: "/illustrations/code-thinking.svg",
+  developerActivity: "/illustrations/developer-activity.svg",
+  researching: "/illustrations/researching.svg",
+  teaching: "/illustrations/teaching.svg",
 };
 
 export const SECTIONS = [
-  { id: "home", comp: <Home /> },
-  { id: "about", comp: <About /> },
-  { id: "skills", comp: <Skills /> },
-  { id: "projects", comp: <>Projects</> },
-  { id: "contact", comp: <>Contact</> },
-  { id: "resume", comp: <>Resume</> },
+  { id: "home", comp: <Home />, icon: "/assets/house-solid.svg" },
+  { id: "about", comp: <About />, icon: "/assets/user-solid.svg" },
+  { id: "skills", comp: <Skills />, icon: "/assets/graduation-cap-solid.svg" },
+  {
+    id: "projects",
+    comp: <>Projects</>,
+    icon: "/assets/laptop-code-solid.svg",
+  },
+  { id: "contact", comp: <>Contact</>, icon: "/assets/phone-solid.svg" },
+  { id: "resume", comp: <>Resume</>, icon: "/assets/file-lines-solid.svg" },
 ];

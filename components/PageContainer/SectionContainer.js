@@ -14,7 +14,7 @@ export default function SectionContainer({ sectionArr = [] }) {
     console.log(section, active);
 
     if (!active && !section)
-      router.replace({ query: { section: sectionArr?.[0]?.id } });
+      router.replace({ query: { section: sectionArr?.[0]?.id } }, "/");
 
     function handleScroll(e) {
       if (!!active) return;
@@ -23,7 +23,7 @@ export default function SectionContainer({ sectionArr = [] }) {
       const activeSection =
         sectionArr?.[Math.round(container?.scrollTop / sectionHeight)]?.id;
 
-      router.replace({ query: { section: activeSection } }, undefined, {
+      router.replace({ query: { section: activeSection } }, "/", {
         shallow: true,
       });
     }
@@ -41,7 +41,7 @@ export default function SectionContainer({ sectionArr = [] }) {
     function handleScrollEnd(e) {
       if (!active) return;
 
-      router.replace({ query: { section: active } }, undefined, {
+      router.replace({ query: { section: active } }, "/", {
         shallow: true,
       });
     }

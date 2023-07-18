@@ -2,7 +2,7 @@ import { about } from "@/data";
 
 import { TextSphere } from "@/lib/TagCloud";
 import { useEffect, useRef } from "react";
-import styles from "./about.module.scss";
+import styles from "./skills.module.scss";
 
 export default function useGenerateSkillsCloud(
   containerClass = "skillsContainer",
@@ -24,8 +24,6 @@ export default function useGenerateSkillsCloud(
     });
 
     elem.observer.observe(elemRef?.current);
-
-    // setStylesToSkills();
   }, []);
 
   function createSkillsSphere() {
@@ -47,6 +45,7 @@ export default function useGenerateSkillsCloud(
     if (window.innerWidth > 2000) options.radius = 300;
     if (window.innerWidth > 2560) options.radius = 350;
 
+    elemRef?.current?.sphere?.destroy();
     return TextSphere(`.${containerClass}`, texts, options);
   }
 

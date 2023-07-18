@@ -2,8 +2,12 @@ import Details from "@/common/Details";
 import Title from "@/common/Title";
 import { skills } from "@/data";
 import styles from "./skills.module.scss";
+import useGenerateSkillsCloud from "./useGenerateSkillsCloud";
 
 export default function Skills() {
+  const containerClass = "skillsContainer";
+  const { elemRef } = useGenerateSkillsCloud(containerClass);
+
   return (
     <>
       <div className={`${styles.skillsContainer}`}>
@@ -13,7 +17,7 @@ export default function Skills() {
           <Details details={skills.details} />
         </div>
 
-        <section>Some thing to be added here</section>
+        <section className={containerClass} ref={elemRef}></section>
       </div>
     </>
   );

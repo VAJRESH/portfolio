@@ -56,6 +56,10 @@
       flex-direction: column;
 
       button {
+        display: flex;
+        justify-content: flex-start;
+        gap: 0.5em;
+
         margin: 5px 10px;
       }
     }

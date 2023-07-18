@@ -1,12 +1,3 @@
-export const sidebarBtns = [
-  { name: "Home", route: "/" },
-  { name: "About", route: "/about" },
-  { name: "Skills", route: "/skills" },
-  { name: "Projects", route: "/projects" },
-  { name: "Contact", route: "/contact" },
-  { name: "Resume", route: "/resume" },
-];
-
 export const home = {
   title: "Hi,*I am Vajresh!",
 };
@@ -26,16 +17,23 @@ export const about = {
     "CSS",
     "Bootstrap",
     "SASS",
+    "SCSS",
     "JavaScript",
     "React JS",
-    "Angular JS",
-    "Node JS",
-    "MongoDB",
+    "React Native",
+    "Recoil",
     "Next JS",
+    "Node JS",
+    "Express",
+    "Angular JS",
     "npm",
     "git",
     "Github",
     "Python",
+    "Django",
+    "Flask",
+    "MongoDB",
+    "MySQL",
     "Java",
   ],
 };
