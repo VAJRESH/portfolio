@@ -2,7 +2,7 @@
 import { Fragment, useEffect, useRef } from "react";
 import styles from "./title.module.scss";
 
-export default function Title({ title = "", subtitle = "" }) {
+export default function Title({ title = "", subtitle = "", size = "medium" }) {
   const h1Ref = useRef(null);
 
   // fade in title animation
@@ -29,7 +29,7 @@ export default function Title({ title = "", subtitle = "" }) {
 
   return (
     <>
-      <h1 className={`h1 ${styles.title}`} ref={h1Ref}>
+      <h1 className={`h1 ${styles.title} ${styles[size]}`} ref={h1Ref}>
         {title?.split("").map((word, i) => {
           if (word === "*") return <br key={word + i} />;
           if (!word?.trim()) return <Fragment key={word + i}>&nbsp;</Fragment>;

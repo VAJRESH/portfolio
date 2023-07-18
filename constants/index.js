@@ -1,4 +1,5 @@
-import Home from "../components/Home";
+import About from "@/components/About";
+import Home from "@/components/Home";
 
 export const ASSETS = {
   favicon: "/vajresh.svg",
@@ -14,7 +15,7 @@ export const ASSETS = {
 
 export const SECTIONS = [
   { id: "home", comp: <Home /> },
-  { id: "about", comp: <>About</> },
+  { id: "about", comp: <About /> },
   { id: "skills", comp: <>Skills</> },
   { id: "projects", comp: <>Projects</> },
   { id: "contact", comp: <>Contact</> },

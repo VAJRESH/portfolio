@@ -1,0 +1,12 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  color: $primary-light;
+
+  gap: 1em;
+  margin: 3em 0;
+
+  p {
+    font-size: 1.3rem;
+  }
+}

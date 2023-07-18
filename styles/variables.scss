@@ -38,6 +38,29 @@ $primary-gradient-to-right: linear-gradient(
   $primary-dark
 );
 
+:export {
+  black: $black;
+  white: $white;
+  blackNeutral: $black-neutral;
+
+  neutral: $neutral;
+  neutralLight: $neutral-light;
+  neutralDark: $neutral-dark;
+
+  primaryLight: $primary-light;
+  primaryNeutral: $primary-neutral;
+  primaryDark: $primary-dark;
+
+  bgColor: $bg-color;
+  danger: $danger;
+  danger: $danger;
+  shadowLight: $shadow-light;
+  shadowDark: $shadow-dark;
+
+  rounded: $rounded;
+  gap: $gap;
+}
+
 // mixins
 @mixin flex-center() {
   display: flex;
