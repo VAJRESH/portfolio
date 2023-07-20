@@ -12,9 +12,34 @@
     flex-direction: column;
     gap: 1em;
 
-    button {
-      width: max-content;
-      margin: 0;
+    .btnContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1em;
+
+      button {
+        width: max-content;
+        margin: 0;
+      }
+
+      p {
+        color: $primary-neutral;
+
+        position: relative;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+
+          animation: textUnwrapper 500ms ease-in-out;
+          background-color: $bg-color;
+
+          height: 100%;
+          width: 0%;
+        }
+      }
     }
   }
 
@@ -116,7 +141,20 @@
             }
           }
         }
+
+        &:hover > a:not(:hover) {
+          opacity: 0.4;
+        }
       }
     }
+  }
+}
+
+@keyframes textUnwrapper {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
   }
 }

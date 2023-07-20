@@ -7,6 +7,7 @@ import styles from "./button.module.scss";
 export default function Button({
   handleClick = function () {},
   isActive = false,
+  isDisabled = false,
   children,
 }) {
   const buttonRef = useRef(null);
@@ -31,6 +32,7 @@ export default function Button({
     <button
       className={`neu-box p ${styles.btn} ${isActive ? styles.active : ""}`}
       onClick={handleClick}
+      disabled={isDisabled}
       ref={buttonRef}
     >
       <div

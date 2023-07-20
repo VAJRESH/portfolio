@@ -5,7 +5,6 @@ import PhoneInput from "react-phone-number-input";
 export default function MobileNumberInput({
   label = "",
   value = "",
-  placeholder = "",
   handleChange = () => {},
 }) {
   return (
@@ -16,7 +15,6 @@ export default function MobileNumberInput({
         <PhoneInput
           international
           countryCallingCodeEditable={false}
-          placeholder={placeholder}
           value={value}
           onChange={handleChange}
           defaultCountry="IN"

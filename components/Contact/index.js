@@ -2,19 +2,14 @@ import Button from "@/common/Button";
 import Title from "@/common/Title";
 import { ASSETS, contact } from "@/data";
 import Image from "next/image";
-import { useState } from "react";
 import Input from "./Input";
 import MobileNumberInput from "./MobileNumberInput";
 import styles from "./contact.module.scss";
+import useHandleContact from "./useHandleContact";
 
 export default function Contact() {
-  const [contactData, setContactData] = useState({
-    name: "",
-    phoneNumber: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const { infoMsg, contactData, handleUpdate, handleSubmit } =
+    useHandleContact();
 
   return (
     <>
@@ -23,28 +18,54 @@ export default function Contact() {
           <Title title={contact.title} subtitle={contact.subTitle} />
 
           <form className={`neu-box`}>
-            <Input label="Full Name" placeholder="John Doe" />
+            <Input
+              label="Full Name"
+              placeholder="John Doe"
+              value={contactData?.name}
+              handleChange={(e) => handleUpdate({ name: e.target.value })}
+            />
 
             <MobileNumberInput
               label="Mobile Number"
-              placeholder="9889 7889 89"
               value={contactData?.phoneNumber}
-              handleChange={(val) =>
-                setContactData((prev) => ({ ...prev, phoneNumber: val }))
-              }
+              handleChange={(val) => handleUpdate({ phoneNumber: val })}
             />
 
-            <Input label="Email" placeholder="johnDoe@gmail.com" />
+            <Input
+              label="Email"
+              placeholder="johnDoe@gmail.com"
+              value={contactData?.email}
+              handleChange={(e) => handleUpdate({ email: e.target.value })}
+            />
 
-            <Input label="Subject" placeholder="Freelance Work" />
+            <Input
+              label="Subject"
+              placeholder="Freelance Work"
+              value={contactData?.subject}
+              handleChange={(e) => handleUpdate({ subject: e.target.value })}
+            />
 
             <Input
               type="textarea"
               label="Message"
               placeholder="Anything you want to talk about. Drop a message"
+              value={contactData?.message}
+              handleChange={(e) => handleUpdate({ message: e.target.value })}
             />
 
-            <Button isActive={true}>Send Message</Button>
+            <div className={`${styles.btnContainer}`}>
+              <Button
+                isActive={true}
+                handleClick={handleSubmit}
+                isDisabled={contactData?.isBtnDisabled}
+              >
+                Send Message
+              </Button>
+
+              {(!!infoMsg || !!contactData?.success) && (
+                <p>{infoMsg || contactData?.success}</p>
+              )}
+            </div>
           </form>
         </div>
 
