@@ -19,11 +19,7 @@ a {
 
 // neumorphic styles
 .neu-box {
-  background-color: $bg-color;
-  box-shadow: 3px 3px 5px 0px $shadow-dark, -3px -3px 5px 0px $shadow-light;
-  border-radius: $rounded;
-
-  margin: $gap;
+  @include neuBox();
 }
 
 // typography
@@ -43,6 +39,12 @@ h1,
 h2,
 .h2 {
   font-size: $h2;
+  font-weight: bolder;
+}
+
+h3,
+.h3 {
+  font-size: $h3;
   font-weight: bolder;
 }
 

@@ -1,0 +1,122 @@
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 3em;
+
+  form {
+    width: 40vw;
+    padding: 1em 2em;
+    margin: 2em 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    button {
+      width: max-content;
+      margin: 0;
+    }
+  }
+
+  .labelInput {
+    color: $primary-light;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    width: 100%;
+
+    input,
+    textarea {
+      border: none;
+      outline: none;
+      padding: 0.5em;
+      font-size: 1.1rem;
+
+      color: $black;
+
+      background-color: $bg-color;
+      box-shadow: inset 3px 3px 5px 0px $shadow-dark,
+        inset -3px -3px 5px 0px $shadow-light;
+      border-radius: $rounded;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 5em;
+    }
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-height: 80vh;
+
+    .imgContainer {
+      position: relative;
+      flex: 2;
+
+      img {
+        object-fit: contain;
+
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .getInTouch {
+      flex: 1;
+      padding: 0.5em 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 0.5em;
+
+      p {
+        padding: 0 1em;
+      }
+
+      .linkContainer {
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          flex: 1;
+
+          div {
+            border-radius: 50%;
+            overflow: hidden;
+
+            height: 3em;
+            width: 3em;
+            padding: 0.5em;
+
+            img {
+              object-fit: contain;
+              height: 100%;
+              width: 100%;
+            }
+          }
+
+          &:hover {
+            div {
+              background: $primary-gradient;
+              color: $white;
+
+              img {
+                filter: invert(100%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import Title from "@/common/Title";
 import { ASSETS, about } from "@/data";
 import Image from "next/image";
-import Details from "../common/Details";
+import Details from "@/common/Details";
 import styles from "./about.module.scss";
 
 export default function About() {

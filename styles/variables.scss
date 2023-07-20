@@ -62,6 +62,14 @@ $primary-gradient-to-right: linear-gradient(
 }
 
 // mixins
+@mixin neuBox() {
+  background-color: $bg-color;
+  box-shadow: 3px 3px 5px 0px $shadow-dark, -3px -3px 5px 0px $shadow-light;
+  border-radius: $rounded;
+
+  margin: $gap;
+}
+
 @mixin flex-center() {
   display: flex;
   justify-content: center;

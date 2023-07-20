@@ -13,10 +13,28 @@ $margin: 10px;
   background-color: transparent;
 
   overflow: hidden;
+  cursor: pointer;
+
+  .gradientHover {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient($white, transparent 60%);
+
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
 
   &.active,
   &:hover {
     background: $primary-gradient-to-right;
     color: $white;
+
+    .gradientHover {
+      opacity: 0.4;
+    }
   }
 }

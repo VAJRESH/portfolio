@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Home from "@/components/Home";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import Contact from "./components/Contact";
 
 export const ASSETS = {
   favicon: "/vajresh.svg",
@@ -13,6 +14,9 @@ export const ASSETS = {
   codeIcon: "/assets/laptop-code-solid.svg",
   phoneIcon: "/assets/phone-solid.svg",
   fileIcon: "/assets/file-lines-solid.svg",
+  callRingIcon: "/assets/call-ring.svg",
+  whatsappIcon: "/assets/whatsapp.svg",
+  emailIcon: "/assets/email.svg",
 
   nextJsLogo: "/logo/nextjs.png",
   cssLogo: "/logo/css.png",
@@ -34,6 +38,7 @@ export const ASSETS = {
   teaching: "/illustrations/teaching.svg",
   secureLogin: "/illustrations/secure-login.svg",
   programming: "/illustrations/programming.svg",
+  onlineConnection: "/illustrations/online-connection.svg",
 
   tools: "/assets/tools.png",
   slideshow: "/assets/slideshow.png",
@@ -45,16 +50,16 @@ export const ASSETS = {
 };
 
 export const SECTIONS = [
-  { id: "home", comp: <Home />, icon: "/assets/house-solid.svg" },
-  { id: "about", comp: <About />, icon: "/assets/user-solid.svg" },
-  { id: "skills", comp: <Skills />, icon: "/assets/graduation-cap-solid.svg" },
+  { id: "home", comp: <Home />, icon: ASSETS?.homeIcon },
+  { id: "about", comp: <About />, icon: ASSETS?.plusIcon },
+  { id: "skills", comp: <Skills />, icon: ASSETS?.graduationCapIcon },
   {
     id: "projects",
     comp: <Projects />,
-    icon: "/assets/laptop-code-solid.svg",
+    icon: ASSETS?.codeSlash,
   },
-  { id: "contact", comp: <>Contact</>, icon: "/assets/phone-solid.svg" },
-  { id: "resume", comp: <>Resume</>, icon: "/assets/file-lines-solid.svg" },
+  { id: "contact", comp: <Contact />, icon: ASSETS?.phoneIcon },
+  { id: "resume", comp: <>Resume</>, icon: ASSETS?.fileIcon },
 ];
 
 export const home = {
@@ -123,4 +128,11 @@ export const projects = {
     { id: 4, name: "test", icon: ASSETS?.testTube },
     { id: 5, name: "launch", icon: ASSETS?.rocket },
   ],
+};
+
+export const contact = {
+  title: "Contact",
+  subTitle: "Reach out at light speed",
+  myPhoneNumber: "+918356085124",
+  myEmail: "vajresh005@gmail.com",
 };
