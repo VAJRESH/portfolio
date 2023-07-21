@@ -63,6 +63,47 @@
         margin: 5px 10px;
       }
     }
+
+    .socialMedia {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 1em 0;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        flex: 1;
+
+        border-radius: 50%;
+        overflow: hidden;
+
+        height: 3em;
+        width: 3em;
+        padding: 0.5em;
+
+        img {
+          object-fit: contain;
+          height: 100%;
+          width: 100%;
+        }
+
+        &:hover {
+          background: $primary-gradient;
+          color: $white;
+
+          img {
+            filter: invert(100%);
+          }
+        }
+      }
+
+      &:hover > a:not(:hover) {
+        opacity: 0.4;
+      }
+    }
   }
 
   main {

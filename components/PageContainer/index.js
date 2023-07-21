@@ -1,13 +1,13 @@
 // portfolio\components\Layout\index.js
 
 import Button from "@/common/Button";
+import { SECTIONS, SOCIAL_MEDIA } from "@/data";
 import { capitalize } from "@/utils/string.utils";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Banner from "./Banner";
 import SectionContainer from "./SectionContainer";
 import styles from "./pageContainer.module.scss";
-import { SECTIONS } from "@/data";
 
 export default function PageContainer() {
   const router = useRouter();
@@ -39,6 +39,14 @@ export default function PageContainer() {
             );
           })}
         </section>
+
+        <div className={styles.socialMedia}>
+          {SOCIAL_MEDIA?.map((item) => (
+            <a href={item?.link} key={item.id} className="neu-box">
+              <img src={item.icon} alt="" />
+            </a>
+          ))}
+        </div>
       </aside>
 
       <main>

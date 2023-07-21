@@ -17,6 +17,9 @@ export const ASSETS = {
   callRingIcon: "/assets/call-ring.svg",
   whatsappIcon: "/assets/whatsapp.svg",
   emailIcon: "/assets/email.svg",
+  linkedInIcon: "/assets/linkedIn.svg",
+  twitterIcon: "/assets/twitter.svg",
+  githubIcon: "/assets/github.svg",
 
   nextJsLogo: "/logo/nextjs.png",
   cssLogo: "/logo/css.png",
@@ -60,6 +63,16 @@ export const SECTIONS = [
   },
   { id: "contact", comp: <Contact />, icon: ASSETS?.phoneIcon },
   { id: "resume", comp: <>Resume</>, icon: ASSETS?.fileIcon },
+];
+
+export const SOCIAL_MEDIA = [
+  {
+    id: 1,
+    icon: ASSETS?.linkedInIcon,
+    link: "https://www.linkedin.com/in/vajresh-patkar-a0634b1aa/",
+  },
+  { id: 1, icon: ASSETS?.githubIcon, link: "https://github.com/VAJRESH" },
+  { id: 1, icon: ASSETS?.twitterIcon, link: "https://twitter.com/Vajreshh" },
 ];
 
 export const home = {
