@@ -51,15 +51,19 @@ export default function SectionContainer({ sectionArr = [] }) {
   return (
     <>
       <div className={`${styles.sectionContainer}`} ref={containerRef}>
-        {sectionArr?.map((section) => (
-          <section
-            key={section?.id}
-            className={`${section?.isFullWidth ? styles.fullWidth : ""}`}
-            ref={(elem) => (containerRef[section?.id] = elem)}
-          >
-            {section?.comp}
-          </section>
-        ))}
+        {sectionArr?.map((section) => {
+          if (section?.isHidden) return null;
+
+          return (
+            <section
+              key={section?.id}
+              className={`${section?.isFullWidth ? styles.fullWidth : ""}`}
+              ref={(elem) => (containerRef[section?.id] = elem)}
+            >
+              {section?.comp}
+            </section>
+          );
+        })}
       </div>
     </>
   );

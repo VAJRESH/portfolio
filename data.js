@@ -19,7 +19,7 @@ export const ASSETS = {
   callRingIcon: "/assets/call-ring.svg",
   whatsappIcon: "/assets/whatsapp.svg",
   emailIcon: "/assets/email.svg",
-  linkedInIcon: "/assets/linkedIn.svg",
+  linkedInIcon: "/assets/linkedin.svg",
   twitterIcon: "/assets/twitter.svg",
   githubIcon: "/assets/github.svg",
 

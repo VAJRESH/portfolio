@@ -95,6 +95,28 @@ p,
   margin-top: 5vh;
 }
 
+// style broken images
+img {
+  position: relative;
+
+  &::before {
+    content: "\2639";
+    width: 100%;
+    height: calc(100% + 10px);
+    background-color: $neutral;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 // accessibility
 // https://sebhastian.com/html-hover-text/#:~:text=There%20are%20two%20ways%20you,CSS%20effect%20using%20%3Abefore%20selector
 .desc {
