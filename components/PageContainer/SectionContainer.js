@@ -11,8 +11,6 @@ export default function SectionContainer({ sectionArr = [] }) {
 
   // get active section on scroll
   useEffect(() => {
-    console.log(section, active);
-
     if (!active && !section)
       router.replace({ query: { section: sectionArr?.[0]?.id } }, "/");
 
@@ -56,6 +54,7 @@ export default function SectionContainer({ sectionArr = [] }) {
         {sectionArr?.map((section) => (
           <section
             key={section?.id}
+            className={`${section?.isFullWidth ? styles.fullWidth : ""}`}
             ref={(elem) => (containerRef[section?.id] = elem)}
           >
             {section?.comp}

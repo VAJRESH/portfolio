@@ -1,7 +1,7 @@
 // portfolio\components\common\Button\index.js
 
+import { useGetMouseCoordinates } from "@/utils/hooks.utils";
 import { bool, element, func } from "prop-types";
-import { useEffect, useRef, useState } from "react";
 import styles from "./button.module.scss";
 
 export default function Button({
@@ -10,30 +10,14 @@ export default function Button({
   isDisabled = false,
   children,
 }) {
-  const buttonRef = useRef(null);
-  const [position, setPosition] = useState({ x: null, y: null });
-
-  useEffect(() => {
-    if (!buttonRef?.current) return;
-
-    const btn = buttonRef?.current;
-    btn?.addEventListener("mousemove", mouseMoveEvent);
-
-    return () => btn?.removeEventListener("mousemove", mouseMoveEvent);
-  }, [buttonRef]);
-
-  function mouseMoveEvent(e) {
-    const { x, y } = buttonRef?.current?.getBoundingClientRect();
-    setPosition({ x: e.clientX - x, y: e.clientY - y });
-  }
-  console.log(position);
+  const { elemRef, position } = useGetMouseCoordinates();
 
   return (
     <button
       className={`neu-box p ${styles.btn} ${isActive ? styles.active : ""}`}
       onClick={handleClick}
       disabled={isDisabled}
-      ref={buttonRef}
+      ref={elemRef}
     >
       <div
         className={styles.gradientHover}

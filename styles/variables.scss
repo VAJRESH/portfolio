@@ -70,6 +70,15 @@ $primary-gradient-to-right: linear-gradient(
   margin: $gap;
 }
 
+@mixin neuBoxInside() {
+  background-color: $bg-color;
+  box-shadow: inset 3px 3px 5px 0px $shadow-dark,
+    inset -3px -3px 5px 0px $shadow-light;
+  border-radius: $rounded;
+
+  margin: $gap;
+}
+
 @mixin flex-center() {
   display: flex;
   justify-content: center;

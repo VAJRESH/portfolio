@@ -20,6 +20,8 @@ export default function PageContainer() {
 
         <section className={`${styles.btnContainer}`}>
           {SECTIONS?.map((sectionData) => {
+            if (sectionData?.isHidden) return null;
+
             return (
               <Button
                 key={sectionData?.id}

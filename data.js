@@ -3,6 +3,7 @@ import Home from "@/components/Home";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 
 export const ASSETS = {
   favicon: "/vajresh.svg",
@@ -13,6 +14,7 @@ export const ASSETS = {
   graduationCapIcon: "/assets/graduation-cap-solid.svg",
   codeIcon: "/assets/laptop-code-solid.svg",
   phoneIcon: "/assets/phone-solid.svg",
+  bulbIcon: "/assets/bulb-creative.svg",
   fileIcon: "/assets/file-lines-solid.svg",
   callRingIcon: "/assets/call-ring.svg",
   whatsappIcon: "/assets/whatsapp.svg",
@@ -21,18 +23,21 @@ export const ASSETS = {
   twitterIcon: "/assets/twitter.svg",
   githubIcon: "/assets/github.svg",
 
-  nextJsLogo: "/logo/nextjs.png",
+  nextjsLogo: "/logo/nextjs.png",
   cssLogo: "/logo/css.png",
   djangoLogo: "/logo/django.png",
   gitLogo: "/logo/git.png",
-  javaScriptLogo: "/logo/javaScript.png",
+  javascriptLogo: "/logo/javaScript.png",
   jqueryLogo: "/logo/jquery.png",
   mongodbLogo: "/logo/mongodb.png",
   nodejsLogo: "/logo/nodejs.png",
   pythonLogo: "/logo/python.png",
-  reactLogo: "/logo/react.png",
+  reactjsLogo: "/logo/react.png",
   sassLogo: "/logo/sass.png",
   htmlLogo: "/logo/html.png",
+  bootstrapLogo: "/logo/bootstrap.png",
+  mysqlLogo: "/logo/mysql.png",
+  expressLogo: "/logo/express.png",
 
   codeReview: "/illustrations/code-review.svg",
   codeThinking: "/illustrations/code-thinking.svg",
@@ -57,12 +62,18 @@ export const SECTIONS = [
   { id: "about", comp: <About />, icon: ASSETS?.plusIcon },
   { id: "skills", comp: <Skills />, icon: ASSETS?.graduationCapIcon },
   {
+    id: "experience",
+    comp: <Experience />,
+    icon: ASSETS?.bulbIcon,
+  },
+  {
     id: "projects",
     comp: <Projects />,
     icon: ASSETS?.codeSlash,
+    isFullWidth: true,
   },
   { id: "contact", comp: <Contact />, icon: ASSETS?.phoneIcon },
-  { id: "resume", comp: <>Resume</>, icon: ASSETS?.fileIcon },
+  { id: "resume", comp: <>Resume</>, icon: ASSETS?.fileIcon, isHidden: true },
 ];
 
 export const SOCIAL_MEDIA = [
@@ -71,8 +82,8 @@ export const SOCIAL_MEDIA = [
     icon: ASSETS?.linkedInIcon,
     link: "https://www.linkedin.com/in/vajresh-patkar-a0634b1aa/",
   },
-  { id: 1, icon: ASSETS?.githubIcon, link: "https://github.com/VAJRESH" },
-  { id: 1, icon: ASSETS?.twitterIcon, link: "https://twitter.com/Vajreshh" },
+  { id: 2, icon: ASSETS?.githubIcon, link: "https://github.com/VAJRESH" },
+  { id: 3, icon: ASSETS?.twitterIcon, link: "https://twitter.com/Vajreshh" },
 ];
 
 export const home = {
@@ -127,7 +138,7 @@ export const skills = {
     web applications.`,
 };
 
-export const projects = {
+export const experience = {
   title: "Work & Experience",
   subTitle: "Skills in Action",
   details: `I have alway believed that active learning is more impactful than passive
@@ -142,6 +153,87 @@ export const projects = {
     { id: 5, name: "launch", icon: ASSETS?.rocket },
   ],
 };
+
+const category = {
+  personal: "My Personal Project",
+  minor: "Personal Minor Projects",
+};
+
+export const projects = [
+  {
+    title: "Media Tracker",
+    category: category?.personal,
+    isFeatured: true,
+    logoPath: "",
+    bannerPath: "/assets/media-tracker.png",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React Js",
+      "Node JS",
+      "Express",
+      "MongoDB",
+    ],
+    description:
+      "It is a full stack website where user can find latest movies and tv series and details about it along with similar movies or series. User can save and manage list of watched movies and tv series. The data is provided by TMDB (https://www.themoviedb.org/).",
+    sourceCodePath: "https://github.com/VAJRESH/media-tracker",
+    liveDemoPath: "https://media-tracker.onrender.com/home",
+  },
+  {
+    title: "Birthday Notifier",
+    category: category?.personal,
+    isFeatured: true,
+    logoPath: "",
+    bannerPath: "/assets/birthday-notifier.PNG",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React Js",
+      "Node JS",
+      "Express",
+      "MongoDB",
+    ],
+    description:
+      "Full stack website to save birthdays and get email reminders on your registered email automatically.",
+    sourceCodePath: "https://github.com/VAJRESH/birthday-notifier",
+    liveDemoPath: "http://birthday-notifier.onrender.com/",
+  },
+  {
+    title: "Business Landing Page",
+    category: category?.minor,
+    logoPath: "",
+    bannerPath: "/assets/business-landing-page.PNG",
+    tags: ["HTML", "SASS", "Bootstrap"],
+    description:
+      "Landing page website created to learn Bootstrap and SASS. Tried to replicate the design.",
+    sourceCodePath: "https://github.com/VAJRESH/Landing-Page",
+    liveDemoPath: "https://vajresh.github.io/Landing-Page/",
+  },
+  {
+    title: "Fylo Landing Page",
+    category: category?.minor,
+    logoPath: "",
+    bannerPath: "/assets/fylo-landing-page.png",
+    tags: ["HTML", "CSS", "Bootstrap"],
+    description:
+      "Created this landing page as a solution to the Fylo dark theme landing page challenge on Frontend Mentor. Took the challenge to improve page layouts with CSS and responsive web design.",
+    sourceCodePath: "https://github.com/VAJRESH/fylo-dark-theme-landing-page",
+    liveDemoPath: "https://vajresh.github.io/fylo-dark-theme-landing-page/",
+  },
+  {
+    title: "First Portfolio Website",
+    category: category?.minor,
+    logoPath: "",
+    bannerPath: "/assets/portfolio.png",
+    tags: ["HTML", "CSS", "JavaScript"],
+    description:
+      "This is one of the first website that I created for improving my skills in HTML, CSS and JavaScript.",
+    sourceCodePath: "https://github.com/VAJRESH/Vajresh.github.io",
+    liveDemoPath: "https://vajresh.github.io/",
+  },
+];
 
 export const contact = {
   title: "Contact",
