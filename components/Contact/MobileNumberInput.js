@@ -16,6 +16,7 @@ export default function MobileNumberInput({
           international
           countryCallingCodeEditable={false}
           value={value}
+          className={styles.mobileNumberInput}
           onChange={handleChange}
           defaultCountry="IN"
         />
