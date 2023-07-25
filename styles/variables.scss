@@ -38,6 +38,19 @@ $primary-gradient-to-right: linear-gradient(
   $primary-dark
 );
 
+// screen size
+$laptop-4k: 2300px;
+$laptop-xl: 1920px;
+$laptop-l: 1706px;
+$laptop-m: 1536px;
+$laptop-s: 1024px;
+$ipad: 877px;
+$tab: 786px;
+$mobile-xl: 600px;
+$mobile-l: 425px;
+$mobile-m: 475px;
+$mobile-s: 320px;
+
 :export {
   black: $black;
   white: $white;
@@ -59,6 +72,18 @@ $primary-gradient-to-right: linear-gradient(
 
   rounded: $rounded;
   gap: $gap;
+
+  laptop4L: $laptop-4k;
+  laptopXL: $laptop-xl;
+  laptopL: $laptop-l;
+  laptopM: $laptop-m;
+  laptopS: $laptop-s;
+  ipad: $ipad;
+  tab: $tab;
+  mobileXL: $mobile-xl;
+  mobileL: $mobile-l;
+  mobileM: $mobile-m;
+  mobileS: $mobile-s;
 }
 
 // mixins

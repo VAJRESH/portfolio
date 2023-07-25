@@ -1,6 +1,6 @@
 .pageContainer {
-  @include flex-center;
-
+  display: grid;
+  grid-template-columns: 1fr auto;
   min-height: 100vh;
   min-width: 100vw;
 
@@ -9,112 +9,134 @@
 
   // side bar
   aside {
-    display: flex;
-    flex-direction: column;
-
-    flex: 1;
-    min-width: 150px;
-    max-width: 220px;
+    width: 12vw;
+    min-width: 220px;
     min-height: 100vh;
 
     margin: 0;
     margin-right: 30px;
 
-    // top section with logo and name
-    .banner {
-      @include flex-center;
-      flex-direction: column;
-      padding: 10px 0;
-
-      .imageContainer {
-        position: relative;
-        border-radius: 50%;
-        padding: 15px;
-
-        height: 100px;
-        width: 100px;
-      }
-
-      .name {
-        text-transform: uppercase;
-        margin-top: 10px;
-
-        @include text-gradient();
-      }
-
-      .position {
-        color: $neutral;
-
-        &:hover {
-          color: $neutral-dark;
-        }
-      }
-    }
-
-    .btnContainer {
-      @include flex-center;
-      flex-direction: column;
-
-      button {
-        display: flex;
-        justify-content: flex-start;
-        gap: 0.5em;
-
-        margin: 5px 10px;
-      }
-    }
-
-    .socialMedia {
+    .sidebar {
       display: flex;
-      justify-content: space-evenly;
-      margin: 1em 0;
+      flex-direction: column;
+      gap: 1em;
 
-      a {
-        display: flex;
+      height: 100%;
+      // max-width: 300px;
+      margin: auto;
+
+      min-height: 100vh;
+
+      // top section with logo and name
+      .banner {
+        @include flex-center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding: 10px 0;
 
-        flex: 1;
-
-        border-radius: 50%;
-        overflow: hidden;
-
-        height: 3em;
-        width: 3em;
-        padding: 0.5em;
-
-        img {
-          object-fit: contain;
+        .imageContainer {
+          position: relative;
           border-radius: 50%;
-          height: 100%;
-          width: 100%;
+          padding: 15px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          width: 50%;
         }
 
-        &:hover {
-          background: $primary-gradient;
-          color: $white;
+        .name {
+          text-transform: uppercase;
+          margin-top: 10px;
+          font-size: 2vmax;
 
-          img {
-            filter: invert(100%);
+          @include text-gradient();
+        }
+
+        .position {
+          color: $neutral;
+          font-size: 1vmax;
+
+          &:hover {
+            color: $neutral-dark;
+          }
+
+          span {
+            font-size: 1vmax;
           }
         }
       }
 
-      &:hover > a:not(:hover) {
-        opacity: 0.4;
+      .btnContainer {
+        @include flex-center;
+        flex-direction: column;
+
+        button {
+          display: flex;
+          justify-content: flex-start;
+          gap: 0.5em;
+          font-size: 1.2vmax;
+
+          margin: 5px 10px;
+
+          .icon {
+            position: relative;
+            height: 100%;
+            width: 10%;
+            padding-bottom: 10%;
+          }
+        }
+      }
+
+      .socialMedia {
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          border-radius: 50%;
+          overflow: hidden;
+
+          width: 50%;
+          padding: 0.5vmax;
+
+          img {
+            object-fit: contain;
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+          }
+
+          &:hover {
+            background: $primary-gradient;
+            color: $white;
+
+            img {
+              filter: invert(100%);
+            }
+          }
+        }
+
+        &:hover > a:not(:hover) {
+          opacity: 0.4;
+        }
       }
     }
   }
 
   main {
-    flex: 4;
+    width: 100%;
+    overflow: hidden;
 
     .sectionContainer {
       scroll-snap-type: y mandatory;
 
       height: 100vh;
-      overflow: auto;
+      overflow: hidden auto;
 
       > section {
         padding: 3em;
@@ -124,7 +146,34 @@
         width: 100%;
 
         &.fullWidth {
-          padding: 0;
+          padding: 0em;
+        }
+      }
+    }
+  }
+
+  &.fullScreen {
+    aside {
+      position: fixed;
+      width: 100%;
+
+      background-color: $neutral-light;
+      z-index: 98;
+
+      .sidebar {
+        min-height: 95vh;
+        border-radius: 5px;
+        border: 1px solid $neutral;
+      }
+    }
+
+    main {
+      .sectionContainer {
+        scroll-snap-type: none;
+        height: max-content;
+
+        > section {
+          padding: 1em;
         }
       }
     }

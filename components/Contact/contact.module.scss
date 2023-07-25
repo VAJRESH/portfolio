@@ -55,7 +55,7 @@
       border: none;
       outline: none;
       padding: 0.5em;
-      font-size: 1.1rem;
+      font-size: 1.1vw;
 
       color: $black;
 
@@ -94,6 +94,7 @@
     .imgContainer {
       position: relative;
       flex: 2;
+      min-height: 150px;
 
       img {
         object-fit: contain;
@@ -160,6 +161,14 @@
           opacity: 0.4;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: $mobile-xl) {
+    flex-wrap: wrap;
+
+    form {
+      width: 90vw;
     }
   }
 }

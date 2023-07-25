@@ -4,10 +4,14 @@ import Image from "next/image";
 import Details from "@/common/Details";
 import styles from "./about.module.scss";
 
-export default function About() {
+export default function About({ isFullScreen = false }) {
   return (
     <>
-      <div className={`${styles.aboutContainer}`}>
+      <div
+        className={`${styles.aboutContainer} ${
+          isFullScreen ? styles.fullScreen : ""
+        }`}
+      >
         <div>
           <Title title={about.title} subtitle={about.subTitle} />
 

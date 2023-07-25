@@ -16,6 +16,14 @@
         width: 100%;
       }
     }
+
+    @media screen and (max-width: $tab) {
+      flex-wrap: wrap;
+
+      section {
+        min-height: 25vh;
+      }
+    }
   }
 
   .processContainer {
@@ -30,9 +38,9 @@
       align-items: center;
       gap: 1em;
 
-      height: 150px;
-      width: 150px;
-      padding: 2em;
+      height: 20vmin;
+      width: 20vmin;
+      padding: 2vmax;
 
       transition: all 500ms ease-out;
 
@@ -43,7 +51,13 @@
 
         img {
           object-fit: contain;
+          height: 100%;
+          width: 100%;
         }
+      }
+
+      p {
+        font-size: 1.2vmax;
       }
 
       &:hover {
@@ -55,6 +69,11 @@
           filter: invert(100%);
         }
       }
+
+      // @media screen and (max-width: $tab) {
+      //   height: 50px;
+      //   width: 50px;
+      // }
     }
   }
 }

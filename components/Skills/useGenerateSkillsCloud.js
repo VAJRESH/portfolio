@@ -42,6 +42,7 @@ export default function useGenerateSkillsCloud(
 
     if (window.innerWidth < 350) options.radius = 120;
     if (window.innerWidth < 450) options.radius = 150;
+    if (window.innerWidth < 1400) options.radius = 170;
     if (window.innerWidth > 2000) options.radius = 300;
     if (window.innerWidth > 2560) options.radius = 350;
 

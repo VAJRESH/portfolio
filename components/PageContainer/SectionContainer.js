@@ -1,11 +1,16 @@
+import { FULLSCREEN_WIDTH } from "@/data";
+import { useGetWindowDimensions } from "@/utils/hooks.utils";
 import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
+import { cloneElement, useEffect, useRef } from "react";
 import styles from "./pageContainer.module.scss";
 
 export default function SectionContainer({ sectionArr = [] }) {
   const containerRef = useRef(null);
   const router = useRouter();
   let { section, active } = router?.query;
+
+  const { width } = useGetWindowDimensions();
+  const isFullScreen = width < FULLSCREEN_WIDTH;
 
   const container = containerRef?.current;
 
@@ -60,7 +65,7 @@ export default function SectionContainer({ sectionArr = [] }) {
               className={`${section?.isFullWidth ? styles.fullWidth : ""}`}
               ref={(elem) => (containerRef[section?.id] = elem)}
             >
-              {section?.comp}
+              {cloneElement(section?.comp, { isFullScreen })}
             </section>
           );
         })}

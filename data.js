@@ -4,6 +4,9 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
+import styles from "@/styles/variables.module.scss";
+
+export const FULLSCREEN_WIDTH = parseInt(styles.tab) + 200;
 
 export const ASSETS = {
   favicon: "/vajresh.svg",

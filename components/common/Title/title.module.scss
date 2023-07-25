@@ -4,15 +4,15 @@
   cursor: auto;
 
   &.large {
-    font-size: 6rem;
+    font-size: 6vmax;
   }
 
   &.medium {
-    font-size: 3rem;
+    font-size: 4vmax;
   }
 
   &.small {
-    font-size: 1.8rem;
+    font-size: 2vmax;
   }
 
   span {
@@ -34,4 +34,5 @@
 
 .subtitle {
   color: $neutral;
+  font-size: 1.3vmax;
 }

@@ -56,3 +56,27 @@ export function useGetMouseCoordinates(elemWidth = null, elemHeight = null) {
 
   return { position, elemRef };
 }
+
+export function useGetWindowDimensions(callback = () => {}) {
+  const [dimensions, setDimensions] = useState({ width: null, height: null });
+
+  useEffect(() => {
+    function updateDimensions() {
+      const _dimensions = {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+
+      setDimensions(_dimensions);
+      callback(_dimensions);
+    }
+
+    // to set initial state
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  return dimensions;
+}

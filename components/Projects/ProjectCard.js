@@ -1,16 +1,24 @@
 import { ASSETS } from "@/data";
-import { useGetMouseCoordinates } from "@/utils/hooks.utils";
+import {
+  useGetMouseCoordinates,
+  useGetWindowDimensions,
+} from "@/utils/hooks.utils";
 import Image from "next/image";
 import Button from "../common/Button";
 import styles from "./projects.module.scss";
 import { useRef } from "react";
 
-export default function ProjectCard({ project = null, isFiltered = null }) {
+export default function ProjectCard({
+  project = null,
+  isFiltered = null,
+  width = "30%",
+}) {
   const projectCardRef = useRef(null);
   const { elemRef, position } = useGetMouseCoordinates(
     projectCardRef?.current?.offsetWidth,
     projectCardRef?.current?.offsetHeight,
   );
+  const { width: screenWidth } = useGetWindowDimensions();
 
   return (
     <>
@@ -18,6 +26,7 @@ export default function ProjectCard({ project = null, isFiltered = null }) {
         className={`neu-box ${styles.projectCard} ${
           isFiltered ? styles.hide : ""
         }`}
+        style={{ width }}
         ref={elemRef}
       >
         <div className={styles.imgContainer}>

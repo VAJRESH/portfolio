@@ -60,7 +60,9 @@ export default function Title({ title = "", subtitle = "", size = "medium" }) {
         })}
       </h1>
 
-      <span className={`subtitle ${styles.subtitle}`}>{subtitle}</span>
+      {!!subtitle && (
+        <span className={`subtitle ${styles.subtitle}`}>{subtitle}</span>
+      )}
     </>
   );
 }

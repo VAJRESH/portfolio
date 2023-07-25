@@ -1,11 +1,13 @@
 .homeContainer {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  min-height: 50vh;
 
   h1 {
     @include text-gradient();
     user-select: none;
-    cursor: auto;
+
+    position: relative;
 
     span {
       opacity: 0;
@@ -24,7 +26,19 @@
 
   // https://codepen.io/pgalor/pen/xyPGvJ
   .gooeyContainer {
-    flex: 1;
+    position: absolute;
+    top: 50%;
+    right: 2em;
+    transform: translateY(-50%);
+
+    height: 450px;
+    width: 450px;
+
+    &.fullScreen {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     .gooey {
       // background-image: linear-gradient(120deg, #34e0f0 0%, #b400ff 100%);
@@ -32,8 +46,8 @@
       border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
       outline: 1px solid transparent;
 
-      width: 450px;
-      height: 450px;
+      height: 100%;
+      width: 100%;
 
       animation: morph 3s linear infinite;
       transform-style: preserve-3d;
@@ -72,5 +86,34 @@
         opacity: 0.7;
       }
     }
+
+    @media screen and (max-width: $laptop-s) {
+      mix-blend-mode: hard-light;
+      opacity: 0.8;
+    }
+    @media screen and (min-width: $laptop-xl) {
+      height: 800px;
+      width: 800px;
+    }
+    @media screen and (min-width: $laptop-l) {
+      height: 600px;
+      width: 600px;
+    }
+    @media screen and (max-width: $tab) {
+      height: 400px;
+      width: 400px;
+    }
+    @media screen and (max-width: $mobile-l) {
+      height: 300px;
+      width: 300px;
+    }
+    @media screen and (max-width: $mobile-s) {
+      height: 250px;
+      width: 250px;
+    }
+  }
+
+  &.fullScreen {
+    margin: 2em auto;
   }
 }

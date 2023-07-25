@@ -1,4 +1,12 @@
 .skillsContainer {
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: $tab) {
+    flex-wrap: wrap;
+
+    section {
+      margin: auto;
+    }
+  }
 }

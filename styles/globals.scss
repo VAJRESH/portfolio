@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Roboto, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -33,13 +34,13 @@ a {
 }
 
 // typography
-$h2: 4rem;
-$h3: 3rem;
-$sub-title: 1.25rem;
-$info: 1rem;
-$caption: 0.8rem;
+$h2: 5vw;
+$h3: 3vw;
+$sub-title: 1.25vw;
+$info: 1vw;
+$caption: 0.8vw;
 
-$h1: 4.5rem;
+$h1: 4.5vw;
 h1,
 .h1 {
   font-size: $h1;
