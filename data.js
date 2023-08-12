@@ -90,7 +90,7 @@ export const SOCIAL_MEDIA = [
 ];
 
 export const home = {
-  title: "Hi,*I am Vajresh!",
+  title: "Hi,*I am Vajresh!!",
 };
 
 export const about = {
