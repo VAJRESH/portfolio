@@ -18,7 +18,6 @@ export default function ProjectCard({
     projectCardRef?.current?.offsetWidth,
     projectCardRef?.current?.offsetHeight,
   );
-  const { width: screenWidth } = useGetWindowDimensions();
 
   return (
     <>
@@ -36,25 +35,25 @@ export default function ProjectCard({
         <p>{project?.title}</p>
 
         <div className={styles.btnContainer}>
-          <Button isDisabled={!project?.liveDemoPath} isActive={true}>
-            <a
-              href={project?.liveDemoPath}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <a
+            href={project?.liveDemoPath}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button isDisabled={!project?.liveDemoPath} isActive={true}>
               Live Demo
-            </a>
-          </Button>
-          <Button isDisabled={!project?.sourceCodePath}>
-            <a
-              href={project?.sourceCodePath}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            </Button>
+          </a>
+          <a
+            href={project?.sourceCodePath}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button isDisabled={!project?.sourceCodePath}>
               <Image src={ASSETS?.codeSlash} height={15} width={15} alt="" />
               Code
-            </a>
-          </Button>
+            </Button>
+          </a>
         </div>
 
         <div
