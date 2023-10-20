@@ -178,4 +178,81 @@
       }
     }
   }
+
+  &.skeletonLoader {
+    @mixin skeletonMixin() {
+      position: relative;
+      background: $neutral-light;
+      background-color: $neutral-light;
+      color: $neutral-light;
+      box-shadow: none;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba($neutral, 0.4),
+          transparent
+        );
+        width: 70%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        animation: loading 1s infinite;
+      }
+
+      > * {
+        visibility: hidden;
+      }
+    }
+
+    .sidebar {
+      .banner {
+        @include skeletonMixin();
+      }
+
+      .btnContainer {
+        button {
+          @include skeletonMixin();
+        }
+      }
+      .socialMedia {
+        a {
+          @include skeletonMixin();
+        }
+      }
+    }
+
+    main {
+      :global(h1) {
+        @include skeletonMixin();
+      }
+
+      section {
+        section {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: skewX(-10deg) translateX(-100%);
+  }
+  100% {
+    transform: skewX(-10deg) translateX(200%);
+  }
 }
