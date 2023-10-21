@@ -17,7 +17,7 @@ export default function Experience() {
           </div>
 
           <section>
-            <Image src={ASSETS?.programming} layout="fill" alt="" />
+            <Image src={ASSETS?.programming} fill={true} alt="" />
           </section>
         </div>
 

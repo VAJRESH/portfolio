@@ -1,12 +1,9 @@
 import { ASSETS } from "@/data";
-import {
-  useGetMouseCoordinates,
-  useGetWindowDimensions,
-} from "@/utils/hooks.utils";
+import { useGetMouseCoordinates } from "@/utils/hooks.utils";
 import Image from "next/image";
+import { useRef } from "react";
 import Button from "../common/Button";
 import styles from "./projects.module.scss";
-import { useRef } from "react";
 
 export default function ProjectCard({
   project = null,
@@ -29,7 +26,7 @@ export default function ProjectCard({
         ref={elemRef}
       >
         <div className={styles.imgContainer}>
-          <Image src={project?.bannerPath} height={500} width={500} alt="" />
+          <Image src={project?.bannerPath} fill={true} alt="" />
         </div>
 
         <p>{project?.title}</p>

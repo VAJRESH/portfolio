@@ -16,7 +16,7 @@ export default function Process() {
             <Fragment key={item?.id}>
               <div className={`neu-box ${styles.processCard}`}>
                 <div className={`${styles.imgContainer}`}>
-                  <Image src={item?.icon} alt="" layout="fill" />
+                  <Image src={item?.icon} alt="" fill={true} />
                 </div>
 
                 <p>{capitalize(item?.name)}</p>

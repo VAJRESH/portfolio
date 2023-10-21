@@ -19,7 +19,7 @@ export default function About({ isFullScreen = false }) {
         </div>
 
         <section>
-          <Image src={ASSETS?.developerActivity} layout="fill" alt="" />
+          <Image src={ASSETS?.developerActivity} fill={true} alt="" />
         </section>
       </div>
     </>

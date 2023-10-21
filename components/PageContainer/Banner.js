@@ -8,7 +8,7 @@ export default function Banner() {
     <>
       <section className={`neu-box ${styles.banner}`}>
         <div className={`neu-box ${styles.imageContainer}`}>
-          <Image src="/vajresh.svg" height={100} width={100} alt="Vajresh" />
+          <Image src="/vajresh.svg" height={70} width={100} alt="Vajresh" />
         </div>
 
         <p className={`title ${styles.name}`}>VAJRESH</p>

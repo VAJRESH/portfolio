@@ -61,7 +61,7 @@ export default function PageContainer() {
                     }}
                   >
                     <div className={styles.icon}>
-                      <Image layout="fill" src={sectionData?.icon} alt="" />
+                      <Image fill={true} src={sectionData?.icon} alt="" />
                     </div>
 
                     {capitalize(sectionData?.id)}

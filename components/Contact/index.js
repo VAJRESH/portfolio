@@ -71,7 +71,7 @@ export default function Contact() {
 
         <section>
           <div className={styles.imgContainer}>
-            <Image src={ASSETS?.onlineConnection} layout="fill" alt="" />
+            <Image src={ASSETS?.onlineConnection} fill={true} alt="" />
           </div>
 
           <div className={`neu-box ${styles.getInTouch}`}>
