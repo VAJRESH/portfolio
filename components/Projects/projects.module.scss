@@ -20,18 +20,21 @@
 
     .selected {
       @include neuBoxInside();
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
 
       .cross {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
 
         background-color: $black;
         color: $white;
-        margin-left: 0.5em;
         border-radius: 50%;
 
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         height: 1em;
         width: 1em;
       }
