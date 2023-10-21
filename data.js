@@ -30,7 +30,7 @@ export const ASSETS = {
   cssLogo: "/logo/css.png",
   djangoLogo: "/logo/django.png",
   gitLogo: "/logo/git.png",
-  javascriptLogo: "/logo/javaScript.png",
+  javascriptLogo: "/logo/javascript.png",
   jqueryLogo: "/logo/jquery.png",
   mongodbLogo: "/logo/mongodb.png",
   nodejsLogo: "/logo/nodejs.png",
@@ -207,7 +207,7 @@ export const projects = [
     title: "Business Landing Page",
     category: category?.minor,
     logoPath: "",
-    bannerPath: "/assets/business-landing-page.PNG",
+    bannerPath: "/assets/business-landing-page.png",
     tags: ["HTML", "SASS", "Bootstrap"],
     description:
       "Landing page website created to learn Bootstrap and SASS. Tried to replicate the design.",
