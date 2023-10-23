@@ -57,7 +57,7 @@
       padding: 0.5em;
       font-size: 1.1vw;
 
-      color: $black;
+      color: $primary-text-color;
 
       @include neuBoxInside();
       margin: 0;
@@ -90,6 +90,7 @@
     flex-direction: column;
     gap: 1em;
     max-height: 80vh;
+    color: $primary-text-color;
 
     .imgContainer {
       position: relative;
@@ -148,7 +149,7 @@
           &:hover {
             div {
               background: $primary-gradient;
-              color: $white;
+              color: $primary-text-color;
 
               img {
                 filter: invert(100%);

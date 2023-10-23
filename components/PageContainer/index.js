@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import Banner from "./Banner";
 import SectionContainer from "./SectionContainer";
 import styles from "./pageContainer.module.scss";
+import ToggleBtn from "./ToggleBtn";
 
 export default function PageContainer() {
   const [showMenu, setShowMenu] = useState(null);
@@ -77,10 +78,11 @@ export default function PageContainer() {
                 </a>
               ))}
             </div>
+
+            <ToggleBtn />
           </div>
         </aside>
       )}
-
       <main>
         <SectionContainer
           sectionArr={SECTIONS?.filter((section) => !section?.isHidden)}

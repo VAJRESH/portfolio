@@ -5,7 +5,7 @@
   min-width: 100vw;
 
   background-color: $bg-color;
-  color: $black;
+  color: $primary-text-color;
 
   // side bar
   aside {
@@ -19,7 +19,7 @@
     .sidebar {
       display: flex;
       flex-direction: column;
-      gap: 1em;
+      gap: 0.8em;
 
       height: 100%;
       // max-width: 300px;
@@ -113,7 +113,7 @@
 
           &:hover {
             background: $primary-gradient;
-            color: $white;
+            color: $primary-text-color;
 
             img {
               filter: invert(100%);
@@ -123,6 +123,61 @@
 
         &:hover > a:not(:hover) {
           opacity: 0.4;
+        }
+      }
+
+      .toggleBtn {
+        @include neuBoxInside();
+
+        $size: 2rem;
+        $padding: 0.3rem;
+
+        position: relative;
+        width: fit-content;
+        border-radius: 30px;
+        padding: $padding;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $padding;
+
+        overflow: hidden;
+        cursor: pointer;
+        outline: none;
+        margin: auto;
+        margin-right: 10px;
+
+        .switch {
+          position: absolute;
+          left: calc($padding + 0.1rem);
+          height: calc($size - 0.2rem);
+          width: calc($size - 0.2rem);
+          border-radius: 50%;
+          transform: translateX(0);
+          transition: transform 0.3s, background-color 0.1s ease;
+          background: $neutral-light;
+          margin: 0;
+        }
+
+        .sun,
+        .moon {
+          position: relative;
+          border-radius: 50%;
+          height: $size;
+          width: $size;
+          padding: 7px;
+          z-index: 1;
+        }
+
+        &.darkMode {
+          .switch {
+            transform: translateX($size + $padding);
+          }
+
+          .sun {
+            opacity: 0.7;
+          }
         }
       }
     }
