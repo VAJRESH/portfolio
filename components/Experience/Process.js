@@ -15,9 +15,7 @@ export default function Process() {
           {experience?.process?.map((item, i) => (
             <Fragment key={item?.id}>
               <div className={`neu-box ${styles.processCard}`}>
-                <div className={`${styles.imgContainer}`}>
-                  <Image src={item?.icon} alt="" fill={true} />
-                </div>
+                <div className={`${styles.imgContainer}`}>{item?.icon}</div>
 
                 <p>{capitalize(item?.name)}</p>
               </div>

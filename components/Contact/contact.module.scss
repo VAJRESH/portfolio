@@ -151,8 +151,12 @@
               background: $primary-gradient;
               color: $primary-text-color;
 
-              img {
-                filter: invert(100%);
+              svg {
+                fill: $white;
+
+                path {
+                  fill: $white;
+                }
               }
             }
           }

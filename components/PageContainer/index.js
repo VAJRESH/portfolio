@@ -4,13 +4,12 @@ import Button from "@/common/Button";
 import { FULLSCREEN_WIDTH, SECTIONS, SOCIAL_MEDIA } from "@/data";
 import { useGetWindowDimensions } from "@/utils/hooks.utils";
 import { capitalize } from "@/utils/string.utils";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Banner from "./Banner";
 import SectionContainer from "./SectionContainer";
-import styles from "./pageContainer.module.scss";
 import ToggleBtn from "./ToggleBtn";
+import styles from "./pageContainer.module.scss";
 
 export default function PageContainer() {
   const [showMenu, setShowMenu] = useState(null);
@@ -61,9 +60,7 @@ export default function PageContainer() {
                       );
                     }}
                   >
-                    <div className={styles.icon}>
-                      <Image fill={true} src={sectionData?.icon} alt="" />
-                    </div>
+                    <div className={styles.icon}>{sectionData?.icon}</div>
 
                     {capitalize(sectionData?.id)}
                   </Button>
@@ -74,7 +71,7 @@ export default function PageContainer() {
             <div className={styles.socialMedia}>
               {SOCIAL_MEDIA?.map((item) => (
                 <a href={item?.link} key={item.id} className="neu-box">
-                  <img src={item.icon} alt="" />
+                  {item.icon}
                 </a>
               ))}
             </div>
