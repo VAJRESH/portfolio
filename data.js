@@ -28,20 +28,6 @@ export const ASSETS = {
   favicon: "/vajresh.svg",
   logo: "/vajresh.svg",
 
-  homeIcon: "/assets/house-solid.svg",
-  plusIcon: "/assets/user-plus-solid.svg",
-  graduationCapIcon: "/assets/graduation-cap-solid.svg",
-  codeIcon: "/assets/laptop-code-solid.svg",
-  phoneIcon: "/assets/phone-solid.svg",
-  bulbIcon: "/assets/bulb-creative.svg",
-  fileIcon: "/assets/file-lines-solid.svg",
-  callRingIcon: "/assets/call-ring.svg",
-  whatsappIcon: "/assets/whatsapp.svg",
-  emailIcon: "/assets/email.svg",
-  linkedInIcon: "/assets/linkedin.svg",
-  twitterIcon: "/assets/twitter.svg",
-  githubIcon: "/assets/github.svg",
-
   nextjsLogo: "/logo/nextjs.png",
   cssLogo: "/logo/css.png",
   djangoLogo: "/logo/django.png",
@@ -66,12 +52,6 @@ export const ASSETS = {
   secureLogin: "/illustrations/secure-login.svg",
   programming: "/illustrations/programming.svg",
   onlineConnection: "/illustrations/online-connection.svg",
-
-  tools: "/assets/tools.png",
-  slideshow: "/assets/slideshow.png",
-  codeSlash: "/assets/code-slash.png",
-  testTube: "/assets/test-tube.png",
-  rocket: "/assets/rocket.png",
 
   arrow: "/assets/arrow.png",
 };

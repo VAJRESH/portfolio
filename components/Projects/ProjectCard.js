@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import Button from "../common/Button";
 import styles from "./projects.module.scss";
+import { CodeSlashIcon } from "../common/icons";
 
 export default function ProjectCard({
   project = null,
@@ -26,7 +27,7 @@ export default function ProjectCard({
         ref={elemRef}
       >
         <div className={styles.imgContainer}>
-          <Image src={project?.bannerPath} fill={true} alt="" />
+          <Image src={project?.bannerPath} fill={true} sizes="33vw" alt="" />
         </div>
 
         <p>{project?.title}</p>
@@ -47,7 +48,7 @@ export default function ProjectCard({
             rel="noopener noreferrer"
           >
             <Button isDisabled={!project?.sourceCodePath}>
-              <Image src={ASSETS?.codeSlash} height={15} width={15} alt="" />
+              <CodeSlashIcon height="15px" />
               Code
             </Button>
           </a>
