@@ -1,8 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./pageContainer.module.scss";
 
 export default function ToggleBtn() {
   const [isDarkMode, setIsDarkMode] = useState(null);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+      toggleDarkMode();
+
+    // Add listener to update styles
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", toggleDarkMode);
+
+    // Remove listener
+    return () => {
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .removeEventListener("change", () => {});
+    };
+  }, []);
 
   function toggleDarkMode() {
     const root = document?.documentElement;
@@ -17,6 +34,10 @@ export default function ToggleBtn() {
       _isDarkMode ? "#222" : "#fafafa",
     );
     root?.style?.setProperty("--bg-color", _isDarkMode ? "#242729" : "#ecf0f3");
+    root?.style?.setProperty(
+      "--neutral-light",
+      _isDarkMode ? "#404040" : "#e0e0e0",
+    );
     root?.style?.setProperty(
       "--primary-dark",
       _isDarkMode ? "#0045ff" : " #0015b5",

@@ -172,7 +172,7 @@
         }
 
         .moon {
-          color: $black;
+          color: $primary-text-color;
         }
 
         &.darkMode {
@@ -258,17 +258,12 @@
       &::after {
         content: "";
         position: absolute;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba($neutral, 0.4),
-          transparent
-        );
+        background: linear-gradient(90deg, transparent, $bg-color, transparent);
         width: 70%;
         height: 100%;
         top: 0;
         left: 0;
-
+        opacity: 0.4;
         animation: loading 1s infinite;
       }
 
@@ -303,9 +298,9 @@
           @include skeletonMixin();
         }
       }
-      .toggleBtn {
-        @include skeletonMixin();
-      }
+      // .toggleBtn {
+      //   @include skeletonMixin();
+      // }
     }
 
     main {
