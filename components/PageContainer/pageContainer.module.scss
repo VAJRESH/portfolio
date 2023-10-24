@@ -277,6 +277,17 @@
       }
     }
 
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      background-color: transparent;
+      z-index: 1;
+    }
+
     .sidebar {
       .banner {
         @include skeletonMixin();
@@ -292,10 +303,15 @@
           @include skeletonMixin();
         }
       }
+      .toggleBtn {
+        @include skeletonMixin();
+      }
     }
 
     main {
-      :global(h1) {
+      h1,
+      span,
+      p {
         @include skeletonMixin();
       }
 
