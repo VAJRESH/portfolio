@@ -42,12 +42,17 @@
       width: 20vmin;
       padding: 2vmax;
 
+      transition: all 500ms ease-out;
+
       .imgContainer {
         position: relative;
-        height: 30px;
+        height: 100%;
+        width: 100%;
 
-        svg {
-          transition: transform 500ms ease-out;
+        img {
+          object-fit: contain;
+          height: 100%;
+          width: 100%;
         }
       }
 
@@ -60,15 +65,15 @@
         color: $white;
         padding: 1.5em;
 
-        svg {
-          fill: $white;
-          transform: scale(1.4);
-
-          path {
-            fill: $white;
-          }
+        img {
+          filter: invert(100%);
         }
       }
+
+      // @media screen and (max-width: $tab) {
+      //   height: 50px;
+      //   width: 50px;
+      // }
     }
   }
 }

@@ -1,26 +1,24 @@
 // colors
-$black: var(--black);
-$white: var(--white);
-$black-neutral: var(--black-neutral);
+$black: #222;
+$white: #fafafa;
+$black-neutral: #4d4d4d;
 
-$neutral: var(--neutral);
-$neutral-light: var(--neutral-light);
-$neutral-dark: var(--neutral-dark);
+$neutral: #aaa;
+$neutral-light: #e0e0e0;
+$neutral-dark: #888;
 
-$primary-light: var(--primary-light);
-$primary-neutral: var(--primary-neutral);
-$primary-dark: var(--primary-dark);
+$primary-light: #00a1ff;
+$primary-neutral: #0066ff;
+$primary-dark: #0015b5;
 
-$secondary-text-color: var(--secondary-text-color);
-$primary-text-color: var(--primary-text-color);
-$bg-color: var(--bg-color);
+$bg-color: #ecf0f3;
 
-$danger: var(--danger);
-$success: var(--success);
+$danger: #e03636;
+$success: #48dc3c;
 
 // neumophic styles
-$shadow-light: var(--shadow-light);
-$shadow-dark: var(--shadow-dark);
+$shadow-light: #ffffff;
+$shadow-dark: #b5b5b5;
 
 $rounded: 10px;
 
@@ -66,8 +64,6 @@ $mobile-s: 320px;
   primaryNeutral: $primary-neutral;
   primaryDark: $primary-dark;
 
-  primaryTextColor: $primary-text-color;
-  secondaryTextColor: $secondary-text-color;
   bgColor: $bg-color;
   danger: $danger;
   danger: $danger;

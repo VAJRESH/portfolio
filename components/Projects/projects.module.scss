@@ -12,7 +12,6 @@
     flex-wrap: wrap;
     user-select: none;
     margin: 0.5em 0;
-    color: $primary-text-color;
 
     > span {
       padding: 0.4em 0.8em;
@@ -31,8 +30,8 @@
         align-items: center;
         justify-content: center;
 
-        background-color: $primary-text-color;
-        color: $secondary-text-color;
+        background-color: $black;
+        color: $white;
         border-radius: 50%;
 
         font-size: 0.9rem;
@@ -46,13 +45,15 @@
     width: 90%;
 
     .projectCard {
+      color: $black;
+
       display: inline-flex;
       flex-direction: column;
       position: relative;
       cursor: pointer;
       text-align: center;
 
-      transition: transform 500ms ease-in-out;
+      transition: all 500ms ease-in-out;
 
       &.hide {
         transform: scale(0, 0);
@@ -138,6 +139,7 @@
             position: relative;
             border-radius: 50%;
             overflow: hidden;
+            background-color: $neutral-light;
             padding: 5px;
 
             img {

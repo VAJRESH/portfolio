@@ -2,31 +2,29 @@ import About from "@/components/About";
 import Home from "@/components/Home";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-import styles from "@/styles/variables.module.scss";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
-import {
-  CodeSlashIcon,
-  FileIcon,
-  GithubIcon,
-  GraduationCapIcon,
-  HomeIcon,
-  LinkedInIcon,
-  PaletteIcon,
-  PhoneIcon,
-  PlusIcon,
-  RocketIcon,
-  TestTubeIcon,
-  TimelineIcon,
-  TrophyIcon,
-  TwitterIcon,
-} from "./components/common/icons";
+import styles from "@/styles/variables.module.scss";
 
 export const FULLSCREEN_WIDTH = parseInt(styles.tab) + 200;
 
 export const ASSETS = {
   favicon: "/vajresh.svg",
   logo: "/vajresh.svg",
+
+  homeIcon: "/assets/house-solid.svg",
+  plusIcon: "/assets/user-plus-solid.svg",
+  graduationCapIcon: "/assets/graduation-cap-solid.svg",
+  codeIcon: "/assets/laptop-code-solid.svg",
+  phoneIcon: "/assets/phone-solid.svg",
+  bulbIcon: "/assets/bulb-creative.svg",
+  fileIcon: "/assets/file-lines-solid.svg",
+  callRingIcon: "/assets/call-ring.svg",
+  whatsappIcon: "/assets/whatsapp.svg",
+  emailIcon: "/assets/email.svg",
+  linkedInIcon: "/assets/linkedin.svg",
+  twitterIcon: "/assets/twitter.svg",
+  githubIcon: "/assets/github.svg",
 
   nextjsLogo: "/logo/nextjs.png",
   cssLogo: "/logo/css.png",
@@ -52,35 +50,43 @@ export const ASSETS = {
   secureLogin: "/illustrations/secure-login.svg",
   programming: "/illustrations/programming.svg",
   onlineConnection: "/illustrations/online-connection.svg",
+
+  tools: "/assets/tools.png",
+  slideshow: "/assets/slideshow.png",
+  codeSlash: "/assets/code-slash.png",
+  testTube: "/assets/test-tube.png",
+  rocket: "/assets/rocket.png",
+
+  arrow: "/assets/arrow.png",
 };
 
 export const SECTIONS = [
-  { id: "home", comp: <Home />, icon: <HomeIcon /> },
-  { id: "about", comp: <About />, icon: <PlusIcon /> },
-  { id: "skills", comp: <Skills />, icon: <GraduationCapIcon /> },
+  { id: "home", comp: <Home />, icon: ASSETS?.homeIcon },
+  { id: "about", comp: <About />, icon: ASSETS?.plusIcon },
+  { id: "skills", comp: <Skills />, icon: ASSETS?.graduationCapIcon },
   {
     id: "experience",
     comp: <Experience />,
-    icon: <TrophyIcon />,
+    icon: ASSETS?.bulbIcon,
   },
   {
     id: "projects",
     comp: <Projects />,
-    icon: <CodeSlashIcon />,
+    icon: ASSETS?.codeSlash,
     isFullWidth: true,
   },
-  { id: "contact", comp: <Contact />, icon: <PhoneIcon /> },
-  { id: "resume", comp: <>Resume</>, icon: <FileIcon />, isHidden: true },
+  { id: "contact", comp: <Contact />, icon: ASSETS?.phoneIcon },
+  { id: "resume", comp: <>Resume</>, icon: ASSETS?.fileIcon, isHidden: true },
 ];
 
 export const SOCIAL_MEDIA = [
   {
     id: 1,
-    icon: <LinkedInIcon />,
+    icon: ASSETS?.linkedInIcon,
     link: "https://www.linkedin.com/in/vajresh-patkar-a0634b1aa/",
   },
-  { id: 2, icon: <GithubIcon />, link: "https://github.com/VAJRESH" },
-  { id: 3, icon: <TwitterIcon />, link: "https://twitter.com/Vajreshh" },
+  { id: 2, icon: ASSETS?.githubIcon, link: "https://github.com/VAJRESH" },
+  { id: 3, icon: ASSETS?.twitterIcon, link: "https://twitter.com/Vajreshh" },
 ];
 
 export const home = {
@@ -143,11 +149,11 @@ export const experience = {
     amazing softwares.*I have build multiple softwares for myself as well as for
     others. I have worked with different teams to solve different problems.`,
   process: [
-    { id: 1, name: "plan", icon: <TimelineIcon /> },
-    { id: 2, name: "design", icon: <PaletteIcon /> },
-    { id: 3, name: "develop", icon: <CodeSlashIcon /> },
-    { id: 4, name: "test", icon: <TestTubeIcon /> },
-    { id: 5, name: "launch", icon: <RocketIcon /> },
+    { id: 1, name: "plan", icon: ASSETS?.tools },
+    { id: 2, name: "design", icon: ASSETS?.slideshow },
+    { id: 3, name: "develop", icon: ASSETS?.codeSlash },
+    { id: 4, name: "test", icon: ASSETS?.testTube },
+    { id: 5, name: "launch", icon: ASSETS?.rocket },
   ],
 };
 
