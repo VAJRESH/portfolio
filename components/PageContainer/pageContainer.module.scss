@@ -298,9 +298,10 @@
           @include skeletonMixin();
         }
       }
-      // .toggleBtn {
-      //   @include skeletonMixin();
-      // }
+
+      .toggleBtn {
+        @include skeletonMixin();
+      }
     }
 
     main {
