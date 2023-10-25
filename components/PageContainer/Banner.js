@@ -1,6 +1,6 @@
 // portfolio\components\Layout\Sidebar\Banner.js
 
-import Image from "next/image";
+import { LogoIcon } from "../common/icons";
 import styles from "./pageContainer.module.scss";
 
 export default function Banner() {
@@ -8,7 +8,7 @@ export default function Banner() {
     <>
       <section className={`neu-box ${styles.banner}`}>
         <div className={`neu-box ${styles.imageContainer}`}>
-          <Image src="/vajresh.svg" height={70} width={100} alt="Vajresh" />
+          <LogoIcon />
         </div>
 
         <p className={`title ${styles.name}`}>VAJRESH</p>

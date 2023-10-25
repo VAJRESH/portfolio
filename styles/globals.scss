@@ -1,9 +1,36 @@
+:root {
+  --black: #222;
+  --white: #fafafa;
+  --black-neutral: #4d4d4d;
+
+  --neutral: #aaa;
+  --neutral-light: #e0e0e0;
+  --neutral-dark: #888;
+
+  --primary-light: #00a1ff;
+  --primary-neutral: #0066ff;
+  --primary-dark: #0015b5;
+
+  --primary-text-color: #222;
+  --secondary-text-color: #fafafa;
+  --bg-color: #ecf0f3;
+
+  --danger: #e03636;
+  --success: #48dc3c;
+
+  --shadow-light: #ffffff;
+  --shadow-dark: #b5b5b5;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: Roboto, sans-serif;
   overflow-x: hidden;
+
+  background-color: $bg-color;
+  color: $primary-text-color;
 }
 
 a {
@@ -16,10 +43,11 @@ a {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  color: inherit;
 
   ::-webkit-scrollbar {
     width: 5px;
-    background-color: $neutral-light;
+    background-color: $primary-text-color;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -140,7 +168,7 @@ img {
     max-width: 300px;
 
     background-color: $neutral-dark;
-    color: $white;
+    color: $primary-text-color;
 
     text-align: center;
     padding: 5px $gap;

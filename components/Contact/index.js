@@ -6,6 +6,7 @@ import Input from "./Input";
 import MobileNumberInput from "./MobileNumberInput";
 import styles from "./contact.module.scss";
 import useHandleContact from "./useHandleContact";
+import { CallRingIcon, EmailIcon, WhatsappIcon } from "../common/icons";
 
 export default function Contact() {
   const { infoMsg, contactData, handleUpdate, handleSubmit } =
@@ -85,7 +86,7 @@ export default function Contact() {
             <div className={`${styles.linkContainer}`}>
               <a href={`tel:${contact?.myPhoneNumber}`}>
                 <div className={`neu-box`}>
-                  <img src={ASSETS?.callRingIcon} alt="" />
+                  <CallRingIcon />
                 </div>
 
                 <p>Call Now</p>
@@ -97,7 +98,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
               >
                 <div className={`neu-box`}>
-                  <img src={ASSETS?.whatsappIcon} alt="" />
+                  <WhatsappIcon />
                 </div>
 
                 <p>Drop a message</p>
@@ -105,8 +106,9 @@ export default function Contact() {
 
               <a href={`mailto:${contact?.myEmail}`}>
                 <div className={`neu-box`}>
-                  <img src={ASSETS?.emailIcon} alt="" />
+                  <EmailIcon />
                 </div>
+
                 <p>Connect with email</p>
               </a>
             </div>

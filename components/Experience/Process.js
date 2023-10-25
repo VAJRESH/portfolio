@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Fragment } from "react";
 import Title from "../common/Title";
 import styles from "./experience.module.scss";
+import { ArrowIcon } from "../common/icons";
 
 export default function Process() {
   return (
@@ -15,16 +16,12 @@ export default function Process() {
           {experience?.process?.map((item, i) => (
             <Fragment key={item?.id}>
               <div className={`neu-box ${styles.processCard}`}>
-                <div className={`${styles.imgContainer}`}>
-                  <Image src={item?.icon} alt="" fill={true} />
-                </div>
+                <div className={`${styles.imgContainer}`}>{item?.icon}</div>
 
                 <p>{capitalize(item?.name)}</p>
               </div>
 
-              {experience?.process?.length !== i + 1 && (
-                <Image src={ASSETS?.arrow} alt="" height={5} width={50} />
-              )}
+              {experience?.process?.length !== i + 1 && <ArrowIcon />}
             </Fragment>
           ))}
         </div>
