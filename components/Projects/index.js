@@ -15,11 +15,11 @@ export default function Projects() {
   function getCardWidth() {
     let totalCardsInRow = 2;
     if (parseInt(width) > 900) ++totalCardsInRow;
-    if (parseInt(width) > 1500) ++totalCardsInRow;
+    if (parseInt(width) > 1400) ++totalCardsInRow;
     if (parseInt(width) > 1700) ++totalCardsInRow;
 
     const containerWidth = containerRef?.current?.offsetWidth;
-    const singleCardWidth = containerWidth / totalCardsInRow - 25;
+    const singleCardWidth = containerWidth / totalCardsInRow - 20.5;
 
     if (containerWidth < 400) return "100%";
 

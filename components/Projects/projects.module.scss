@@ -43,7 +43,7 @@
   }
 
   .projects {
-    width: 90%;
+    width: 97%;
 
     .projectCard {
       display: inline-flex;
@@ -81,6 +81,8 @@
 
       .btnContainer {
         display: flex;
+        align-items: center;
+        justify-content: center;
 
         a {
           width: 100%;
