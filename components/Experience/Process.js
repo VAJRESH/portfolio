@@ -21,7 +21,11 @@ export default function Process() {
                 <p>{capitalize(item?.name)}</p>
               </div>
 
-              {experience?.process?.length !== i + 1 && <ArrowIcon />}
+              {experience?.process?.length !== i + 1 && (
+                <span>
+                  <ArrowIcon />
+                </span>
+              )}
             </Fragment>
           ))}
         </div>

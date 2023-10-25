@@ -39,12 +39,14 @@
       gap: 1em;
 
       height: 20vmin;
-      width: 20vmin;
-      padding: 2vmax;
+      width: 100%;
+      padding: 0.5em;
+      font-size: 1rem;
 
       .imgContainer {
         position: relative;
-        height: 30px;
+        width: 100%;
+        max-width: 2rem;
 
         svg {
           transition: transform 500ms ease-out;
@@ -68,6 +70,12 @@
             fill: $white;
           }
         }
+      }
+    }
+
+    @media screen and (max-width: $tab) {
+      span {
+        display: none;
       }
     }
   }
