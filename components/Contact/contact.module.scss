@@ -1,7 +1,7 @@
 .contactContainer {
   display: flex;
   justify-content: space-between;
-  gap: 3em;
+  gap: 2em;
 
   form {
     width: 40vw;
@@ -55,7 +55,7 @@
       border: none;
       outline: none;
       padding: 0.5em;
-      font-size: 1.1vw;
+      font-size: 0.8rem;
 
       color: $primary-text-color;
 
@@ -169,7 +169,7 @@
     }
   }
 
-  @media screen and (max-width: $mobile-xl) {
+  @media screen and (max-width: $tab) {
     flex-wrap: wrap;
 
     form {

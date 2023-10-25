@@ -39,7 +39,9 @@ export default function Projects() {
             <span
               key={item?.id}
               onClick={() => handleSelect(item?.id)}
-              className={`${item?.isSelected ? styles.selected : "neu-box"}`}
+              className={`${styles.tag} ${
+                item?.isSelected ? styles.selected : "neu-box"
+              }`}
             >
               {item?.tag}
               {!!item?.isSelected && <span className={styles.cross}>x</span>}

@@ -11,13 +11,8 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     user-select: none;
-    margin: 0.5em 0;
     color: $primary-text-color;
-
-    > span {
-      padding: 0.4em 0.8em;
-      cursor: pointer;
-    }
+    font-size: 0.7rem;
 
     .selected {
       @include neuBoxInside();
@@ -35,15 +30,20 @@
         color: $secondary-text-color;
         border-radius: 50%;
 
-        font-size: 0.9rem;
         height: 1em;
         width: 1em;
       }
     }
+
+    .tag {
+      margin: 8px;
+      padding: 0.4em 0.8em;
+      cursor: pointer;
+    }
   }
 
   .projects {
-    width: 97%;
+    width: 95%;
 
     .projectCard {
       display: inline-flex;
@@ -167,6 +167,12 @@
           }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: $mobile-l) {
+    .projects {
+      width: 90%;
     }
   }
 }
