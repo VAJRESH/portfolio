@@ -42,27 +42,28 @@
           justify-content: center;
           align-items: center;
 
-          width: 50%;
+          // width: 50%;
+          aspect-ratio: 1/1;
         }
 
         .name {
           text-transform: uppercase;
           margin-top: 10px;
-          font-size: 2vmax;
+          font-size: 1.5rem;
 
           @include text-gradient();
         }
 
         .position {
           color: $neutral;
-          font-size: 1vmax;
+          font-size: 1rem;
 
           &:hover {
             color: $neutral-dark;
           }
 
           span {
-            font-size: 1vmax;
+            font-size: 1rem;
           }
         }
       }
@@ -75,14 +76,16 @@
           display: flex;
           justify-content: flex-start;
           gap: 0.5em;
-          font-size: 1.2vmax;
+          font-size: 0.7rem;
 
           margin: 5px 10px;
 
           .icon {
             position: relative;
             height: 100%;
-            width: 10%;
+            width: auto;
+            min-width: 0.8rem;
+            aspect-ratio: 1/1;
           }
         }
       }
@@ -100,12 +103,12 @@
           border-radius: 50%;
           overflow: hidden;
 
-          width: 50%;
-          padding: 0.5vmax;
+          padding: 0.5rem;
+          max-height: 2.5rem;
+          aspect-ratio: 1/1;
 
           svg {
             object-fit: contain;
-            border-radius: 50%;
             height: 100%;
             width: 100%;
           }
@@ -131,7 +134,7 @@
         @include neuBoxInside();
 
         $size: 2rem;
-        $padding: 0.3rem;
+        $padding: 0.2rem;
 
         position: relative;
         width: fit-content;
@@ -152,8 +155,8 @@
         .switch {
           position: absolute;
           left: calc($padding + 0.1rem);
-          height: calc($size - 0.2rem);
-          width: calc($size - 0.2rem);
+          height: calc($size - $padding - 0.2rem);
+          width: calc($size - $padding - 0.2rem);
           border-radius: 50%;
           transform: translateX(0);
           transition: transform 0.3s, background-color 0.1s ease;
@@ -212,19 +215,35 @@
     }
   }
 
+  .menuBtn {
+    position: fixed;
+    top: 0.5em;
+    left: 0.5em;
+    height: 1.5em;
+    z-index: 100;
+    cursor: pointer;
+  }
+
   &.fullScreen {
     aside {
       position: fixed;
-      width: 100%;
+      width: 100vw;
 
-      background-color: $neutral-light;
-      z-index: 98;
+      // tag cloud zindex is very high
+      z-index: 100;
 
       .sidebar {
-        min-height: 95vh;
+        min-height: 100vh;
         border-radius: 5px;
-        border: 1px solid $neutral;
+        // border: 1px solid $neutral;
+        width: 80%;
       }
+    }
+
+    .crossBtn {
+      z-index: 101;
+      right: 10px;
+      left: auto;
     }
 
     main {
@@ -302,6 +321,10 @@
       .toggleBtn {
         @include skeletonMixin();
       }
+    }
+
+    .menuBtn {
+      visibility: hidden;
     }
 
     main {

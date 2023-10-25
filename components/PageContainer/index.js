@@ -6,6 +6,7 @@ import { useGetWindowDimensions } from "@/utils/hooks.utils";
 import { capitalize } from "@/utils/string.utils";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { CrossIcon, MenuBarIcon } from "../common/icons";
 import Banner from "./Banner";
 import SectionContainer from "./SectionContainer";
 import ToggleBtn from "./ToggleBtn";
@@ -80,6 +81,16 @@ export default function PageContainer() {
           </div>
         </aside>
       )}
+
+      {isFullScreen && (
+        <div
+          className={`${styles.menuBtn} ${showMenu ? styles.crossBtn : ""}`}
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          {showMenu ? <CrossIcon /> : <MenuBarIcon />}
+        </div>
+      )}
+
       <main>
         <SectionContainer
           sectionArr={SECTIONS?.filter((section) => !section?.isHidden)}
