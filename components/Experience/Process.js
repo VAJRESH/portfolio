@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Fragment } from "react";
 import Title from "../common/Title";
 import styles from "./experience.module.scss";
+import { ArrowIcon } from "../common/icons";
 
 export default function Process() {
   return (
@@ -20,9 +21,7 @@ export default function Process() {
                 <p>{capitalize(item?.name)}</p>
               </div>
 
-              {experience?.process?.length !== i + 1 && (
-                <Image src={ASSETS?.arrow} alt="" height={5} width={50} />
-              )}
+              {experience?.process?.length !== i + 1 && <ArrowIcon />}
             </Fragment>
           ))}
         </div>

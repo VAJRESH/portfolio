@@ -52,8 +52,6 @@ export const ASSETS = {
   secureLogin: "/illustrations/secure-login.svg",
   programming: "/illustrations/programming.svg",
   onlineConnection: "/illustrations/online-connection.svg",
-
-  arrow: "/assets/arrow.png",
 };
 
 export const SECTIONS = [

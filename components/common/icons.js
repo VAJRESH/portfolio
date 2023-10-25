@@ -313,3 +313,22 @@ export function RocketIcon({ color = styles.primaryTextColor }) {
     </>
   );
 }
+
+export function ArrowIcon({ color = styles.primaryTextColor }) {
+  return (
+    <>
+      <svg
+        width="50"
+        height="6"
+        viewBox="0 0 50 6"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M50 3L45 0.113249V5.88675L50 3ZM0 3.5L2.60417 3.5V2.5L0 2.5L0 3.5ZM5.72917 3.5L10.9375 3.5V2.5L5.72917 2.5V3.5ZM14.0625 3.5L19.2708 3.5V2.5L14.0625 2.5V3.5ZM22.3958 3.5L27.6042 3.5V2.5L22.3958 2.5V3.5ZM30.7292 3.5L35.9375 3.5V2.5L30.7292 2.5V3.5ZM39.0625 3.5L44.2708 3.5V2.5L39.0625 2.5V3.5Z"
+          fill={color}
+        />
+      </svg>
+    </>
+  );
+}
