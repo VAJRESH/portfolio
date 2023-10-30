@@ -47,10 +47,11 @@
         position: relative;
         width: 100%;
         max-width: 2rem;
+      }
 
-        svg {
-          transition: transform 500ms ease-out;
-        }
+      svg,
+      p {
+        transition: transform 500ms ease-out;
       }
 
       p {
@@ -60,11 +61,11 @@
       &:hover {
         background: $primary-gradient;
         color: $white;
-        padding: 1.5em;
 
-        svg {
+        svg,
+        p {
           fill: $white;
-          transform: scale(1.4);
+          transform: scale(1.5);
 
           path {
             fill: $white;

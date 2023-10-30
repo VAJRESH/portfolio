@@ -19,7 +19,7 @@
     .sidebar {
       display: flex;
       flex-direction: column;
-      gap: 0.8em;
+      gap: 1em;
 
       height: 100%;
       // max-width: 300px;
@@ -76,7 +76,7 @@
           display: flex;
           justify-content: flex-start;
           gap: 0.5em;
-          font-size: 0.7rem;
+          font-size: 1rem;
 
           margin: 5px 10px;
 
@@ -149,8 +149,7 @@
         overflow: hidden;
         cursor: pointer;
         outline: none;
-        margin: auto;
-        margin-right: 10px;
+        margin: auto 10px 10px auto;
 
         .switch {
           position: absolute;
@@ -228,6 +227,7 @@
     aside {
       position: fixed;
       width: 100vw;
+      height: 100%;
 
       // tag cloud zindex is very high
       z-index: 100;
@@ -235,8 +235,11 @@
       .sidebar {
         min-height: 100vh;
         border-radius: 5px;
-        // border: 1px solid $neutral;
         width: 80%;
+
+        .toggleBtn {
+          margin-top: 2em;
+        }
       }
     }
 

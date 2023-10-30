@@ -12,7 +12,8 @@
     flex-wrap: wrap;
     user-select: none;
     color: $primary-text-color;
-    font-size: 0.7rem;
+    // font-size: 0.7rem;
+    padding: 0.5em 0;
 
     .selected {
       @include neuBoxInside();
@@ -36,7 +37,7 @@
     }
 
     .tag {
-      margin: 8px;
+      // margin: 8px;
       padding: 0.4em 0.8em;
       cursor: pointer;
     }
