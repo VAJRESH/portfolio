@@ -77,10 +77,21 @@ export const SOCIAL_MEDIA = [
   {
     id: 1,
     icon: <LinkedInIcon />,
+    name: "LinkedIn",
     link: "https://www.linkedin.com/in/vajresh-patkar-a0634b1aa/",
   },
-  { id: 2, icon: <GithubIcon />, link: "https://github.com/VAJRESH" },
-  { id: 3, icon: <TwitterIcon />, link: "https://twitter.com/Vajreshh" },
+  {
+    id: 2,
+    icon: <GithubIcon />,
+    name: "Github",
+    link: "https://github.com/VAJRESH",
+  },
+  {
+    id: 3,
+    icon: <TwitterIcon />,
+    name: "Twitter",
+    link: "https://twitter.com/Vajreshh",
+  },
 ];
 
 export const home = {

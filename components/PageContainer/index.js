@@ -71,7 +71,12 @@ export default function PageContainer() {
 
             <div className={styles.socialMedia}>
               {SOCIAL_MEDIA?.map((item) => (
-                <a href={item?.link} key={item.id} className="neu-box">
+                <a
+                  href={item?.link}
+                  key={item.id}
+                  aria-label={item?.name}
+                  className="neu-box"
+                >
                   {item.icon}
                 </a>
               ))}

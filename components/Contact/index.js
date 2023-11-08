@@ -76,7 +76,7 @@ export default function Contact() {
           </div>
 
           <div className={`neu-box ${styles.getInTouch}`}>
-            <h4 className={`title`}>Get In Touch</h4>
+            <p className={`title`}>Get In Touch</p>
 
             <p>
               Want to start a new project or need help in an ongoing project?
