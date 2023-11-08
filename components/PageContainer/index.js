@@ -20,7 +20,7 @@ export default function PageContainer() {
   const { section, active } = router?.query;
 
   useEffect(() => {
-    const timerId = setTimeout(() => setIsLoading(false), 2000);
+    const timerId = setTimeout(() => setIsLoading(false), 1000);
 
     return () => clearTimeout(timerId);
   }, []);
