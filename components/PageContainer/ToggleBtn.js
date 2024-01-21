@@ -42,11 +42,11 @@ export default function ToggleBtn() {
       "--primary-dark",
       _isDarkMode ? "#0045ff" : " #0015b5",
     );
-    root?.style?.setProperty("--shadow-light", _isDarkMode ? "#000" : "#fff");
     root?.style?.setProperty(
-      "--shadow-dark",
-      _isDarkMode ? "#3e3e3e" : "#b5b5b5",
+      "--shadow-light",
+      _isDarkMode ? "#3e3e3e" : "#fff",
     );
+    root?.style?.setProperty("--shadow-dark", _isDarkMode ? "#000" : "#b5b5b5");
 
     setIsDarkMode(_isDarkMode);
   }
@@ -56,7 +56,7 @@ export default function ToggleBtn() {
         className={`${styles.toggleBtn} ${isDarkMode ? styles.darkMode : ""}`}
         onClick={toggleDarkMode}
       >
-        <div className={`neu-box ${styles.switch}`}></div>
+        <div className={`${styles.switch}`}></div>
 
         <svg
           className={`${styles.sun}`}
