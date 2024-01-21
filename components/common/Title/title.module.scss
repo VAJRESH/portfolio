@@ -35,4 +35,6 @@
 .subtitle {
   color: $neutral;
   font-size: 1.3vmax;
+
+  @include gradient-underline();
 }

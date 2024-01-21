@@ -122,6 +122,23 @@ $mobile-s: 320px;
 }
 
 // animations
+@mixin gradient-underline(
+  $height: 3px,
+  $linearGradient: $primary-gradient-to-right
+) {
+  padding: 0.2em 0;
+  background: $primary-gradient-to-right;
+  background-size: 0% calc($height - 2px);
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  transition: background-size 300ms ease-in;
+  cursor: default;
+
+  &:hover {
+    background-size: 100% $height;
+  }
+}
+
 @keyframes rubberBand {
   0% {
     transform: scale3d(1, 1, 1);
